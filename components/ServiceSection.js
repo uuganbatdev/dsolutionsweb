@@ -63,6 +63,9 @@ const ServiceSectionStyled = styled.div`
             justify-content: center;
             align-items: center;
             padding: 2vw;
+            h3 {
+                text-align: center;
+            }
             img {
                 width: 2vw;
             }
