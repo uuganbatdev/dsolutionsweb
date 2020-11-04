@@ -79,7 +79,7 @@ const AboutUsSectionStyled = styled.div`
             background: #11141b;
             padding: 3vw 1vw;
             border-radius: 1vw;
-            box-shadow: 0px 10px 20px -5px rgba(52, 60, 70, 0.1);
+            box-shadow: 0px 0.6vw 1.2vw -0.3vw rgba(52, 60, 70, 0.1);
             .long-card-left,
             .long-card-right {
                 width: 50%;

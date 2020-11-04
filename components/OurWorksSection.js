@@ -81,11 +81,14 @@ const OurWorskSectionStyled = styled.div`
         flex-shrink: 0;
         flex-basis: 25%;
         .inner-slide {
+            
             width: 95%;
             border-radius: 1vw;
             margin: 0 auto;
             background: #13161d;
+            padding-bottom: 1vw;
             img {
+                border: 0.1vw solid #75dab4;
                 border-top-left-radius: 1vw;
                 border-top-right-radius: 1vw;                
                 width: 100%;
@@ -103,7 +106,6 @@ const OurWorskSectionStyled = styled.div`
     }
     .swiper-wrapper {
         width: 100%;
-        height: 23vw;
         display: flex;
         padding: 0;
     }

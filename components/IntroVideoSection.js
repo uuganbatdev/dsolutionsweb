@@ -50,7 +50,7 @@ const IntroVideoSectionStyled = styled.div`
         align-self: center;
         background: #76dbb5;
         position: relative;
-        width: 70%;
+        width: 80%;
         height: 30vw;
         margin: 3vw;
         top: 5vw;

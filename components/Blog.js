@@ -23,7 +23,7 @@ function Blog({dateNum,date,poster,tech,img,title}) {
 }
 
 const BlogStyled = styled.div`
-    width: 30%;
+    width: 31%;
     height: 20vw;
     position: relative;
     :hover img {
@@ -58,9 +58,13 @@ const BlogStyled = styled.div`
         .poster {
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: left;
+            h3 {
+                font-size: 0.9vw;
+            }
             p {
                 color: #75dab4;
+                margin: 0 1vw;
             }
         }
         .title {

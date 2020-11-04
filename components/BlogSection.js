@@ -15,14 +15,14 @@ function BlogSection() {
             date: ['06', 'AUG 2019'],
             poster: 'admin',
             usedTech: 'nextjs',
-            bgImg: 'https://miro.medium.com/max/10944/0*noEsnJ8kRsectnQg',
+            bgImg: 'https://i.ytimg.com/vi/hJiEoOvvIlk/maxresdefault.jpg',
             title: 'The Start-Up Ultimate Guide to Make your WordPress Journal he Start-Up Ultimate Guide to Make your WordPress Journ'   
         },
         {
             date: ['06', 'AUG 2019'],
             poster: 'admin',
             usedTech: 'nextjs',
-            bgImg: 'https://miro.medium.com/max/10944/0*noEsnJ8kRsectnQg',
+        bgImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNOF-V23beuuSnDYMRN0oIOaQcF8LSaWjimQ&usqp=CAU',
             title: 'The Start-Up Ultimate Guide to Make your WordPress Journal'   
         }
     ]
@@ -69,7 +69,7 @@ const BlogSectionStyled = styled.div`
     .blogs-container {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
 `
