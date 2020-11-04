@@ -63,6 +63,38 @@ function CommentSection() {
 }   
 
 const CommentSectionStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    .inner-comment {
+        .slide {
+            width: 100% !important;
+            img {
+                width: 15vh !important;
+                height: 15vh !important;
+            }
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 2vh !important;
+        }
+        .swiper-pagination {
+            width: 30vh !important;
+            .swiper-pagination-bullet {
+                width: 1vh !important;
+                height: 1vh !important;
+                margin: 0 0.5vh !important;
+            }
+        }
+        width: 95% !important;
+        .text {
+            width: 100%!important;
+        }
+        p {
+            width: 100% !important;
+            font-size: 4vh !important;
+            line-height: normal !important;
+        }
+    }
+}
     width: 100vw;
     background: #11141b;
     padding: 5vw 0;
@@ -153,6 +185,7 @@ const CommentSectionStyled = styled.div`
             margin: 0.1vw;
             opacity: 0.5;
             transition: 0.3s;
+            cursor: pointer;
         }
         .swiper-pagination-bullet-active {
             transition: 0.3s;

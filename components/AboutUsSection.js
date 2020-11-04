@@ -37,6 +37,52 @@ function AboutUsSection() {
 }   
 
 const AboutUsSectionStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    flex-direction: column;
+    width: 95% !important;
+    h2 {
+        text-align: center;
+    }
+    .left,
+    .right {
+       width: 100% !important;
+    }
+    .left * {
+        width: 100% !important;
+    }
+    .left {
+        p {
+            line-height: normal !important;
+        }
+    }
+    .right {
+        margin: 5vh 0!important;
+        .image-wrapper {
+            img {
+                border-radius: 2vh !important;
+            }
+        }
+        .long-card {
+            flex-direction: column;
+            border-radius: 2vh !important;
+            left: auto !important;
+            width: 90% !important;
+            top: 50% !important;
+            padding: 3vh  0!important;
+            .long-card-left,
+            .long-card-right {
+                padding: 2vh 0!important;
+                width: 100% !important;
+            }
+            .long-card-right {
+                
+                border-top: 0.1vh solid #75dab4 !important;
+            
+            }
+
+        }
+    }
+}
     width: 65%;
     margin: 6vw auto;
     display:flex;

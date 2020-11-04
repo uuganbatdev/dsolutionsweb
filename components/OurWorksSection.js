@@ -1,11 +1,17 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation} from 'swiper';
+import {useEffect, useState} from 'react';
 
 SwiperCore.use([Navigation]);
 
 function OurWorkSection() {
-
+    const [decideSlidePV, setdecideSlidePV] = useState(0);
+    useEffect(() => {
+        if(window.innerHeight > window.innerWidth) {
+             setdecideSlidePV(1)
+        } else {setdecideSlidePV(4)};
+    })
     const projectsSlides = [
         {
             imgSrc: 'https://today.duke.edu/sites/default/files/styles/story_hero/public/coding_HERO.jpg?itok=F8YWeHdH',
@@ -38,13 +44,13 @@ function OurWorkSection() {
             text: 'Innovation and Crafts'
         }
     ]
-    
+
     return (
         <OurWorskSectionStyled>
             <h2>OUR WORKS.</h2>
                 <Swiper
                 spaceBetween={0}
-                slidesPerView={4}
+                slidesPerView={decideSlidePV}
                 loop={true}
                 navigation
                 >
@@ -65,6 +71,17 @@ function OurWorkSection() {
 }   
 
 const OurWorskSectionStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    h2 {
+        margin: 5vh !important;
+    }
+    .slide {
+        flex-basis: 100% !important;
+        .description {
+            padding-bottom: 5vh !important;
+        }
+    }
+}
     width: 100vw;
     margin: 5vw auto;
     display: flex;
@@ -80,13 +97,13 @@ const OurWorskSectionStyled = styled.div`
         display: flex;
         flex-shrink: 0;
         flex-basis: 25%;
+
         .inner-slide {
             
             width: 95%;
             border-radius: 1vw;
             margin: 0 auto;
             background: #13161d;
-            padding-bottom: 1vw;
             img {
                 border: 0.1vw solid #75dab4;
                 border-top-left-radius: 1vw;

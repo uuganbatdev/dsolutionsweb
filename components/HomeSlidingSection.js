@@ -31,6 +31,7 @@ function HomeSlidingSection() {
                 slidesPerView={1}
                 loop={true}
                 autoplay={true}
+                // pagination={{ clickable:true }}
                 navigation
                 >
                 {homeBigSlides.map(slide => {  
@@ -52,9 +53,41 @@ function HomeSlidingSection() {
 }   
 
 const HomeSlidingSectionStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    p {
+        line-height: normal !important;
+    }
+    .swiper-button-prev {
+        bottom: 10vh !important;
+    }
+}
     width: 100vw;
     height: 100vh;
     position: relative;
+    .swiper-pagination {
+        position: absolute;
+        width: 20vw ;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        .swiper-pagination-bullet {
+            width: 0.5vw;
+            height: 0.5vw;
+            border-radius: 50%;
+            background: white;
+            margin: 0.1vw;
+            opacity: 0.5;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .swiper-pagination-bullet-active {
+            transition: 0.3s;
+            background: #75dab4;
+            opacity: 1 !important;
+        }
+    }
     .slide {
         width: 100%;
         height: 100%;

@@ -12,6 +12,16 @@ function InfoNum({src, num, text}) {
 }   
 
 const InfoNumStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    width: 100% !important;
+    p {
+        font-size: 3vh !important;
+    }
+    img {
+        width: 7vh !important;
+    }
+    margin: 2vh 0!important;
+}
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,8 +40,6 @@ const InfoNumStyled = styled.div`
         width: 3vw;
     }
     border-right: 0.1vw solid #76dbb5;
-    :nth-child(4n) {
-        border-right: none;        
-    }
+
 `
 export default InfoNum

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Header from '../components/Header.js'
+// import Header from '../components/Header.js'
 import HomeSlidingSection from '../components/HomeSlidingSection.js'
 import AboutUsSection from '../components/AboutUsSection.js'
 import ServiceSection from '../components/ServiceSection.js'
@@ -17,7 +17,7 @@ export default function Home() {
         <title>Diverse Solutions</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      {/* <Header /> */}
       <HomeSlidingSection />
       <AboutUsSection />
       <ServiceSection />

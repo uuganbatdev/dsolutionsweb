@@ -32,9 +32,46 @@ function ServiceSection() {
 }   
 
 const ServiceSectionStyled = styled.div`
+    @media only screen and (orientation:portrait) {
+        width: 95% !important;
+        padding: 5vh 0!important;
+        .cards-container {
+           flex-direction: column;
+           width: 100% !important;  
+        }
+        h2 {
+
+            margin: 5vh auto!important;
+        }
+        .card {
+            width: 100% !important;
+            height: auto !important;
+            padding: 4vh 0 !important;
+            margin: 3vh 0!important;
+            img {
+                width: 5vh !important;
+                height: 5vh !important;
+            }
+            p {
+                line-height: normal !important;
+                width: 50% !important;
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                margin-top: 0 !important;
+            }
+        }
+        a {
+            margin-top: 2vh !important;
+            width: 15vh !important;
+            height: 6vh !important;
+        }
+    }
+
     width: 65%;
     margin: 10vw auto;
     display: flex;
+    overflow-x: hidden;
     flex-direction: column;
     h2 {
         margin: 0;
@@ -65,6 +102,7 @@ const ServiceSectionStyled = styled.div`
             padding: 2vw;
             h3 {
                 text-align: center;
+                margin: 1vw;
             }
             img {
                 width: 2vw;
@@ -74,12 +112,12 @@ const ServiceSectionStyled = styled.div`
                 text-align: center;
                 width: 80%;
             }
-            &:nth-child(2) {
+            &:nth-of-type(2) {
                 margin-top: 4vw;
                 background: #76dbb5;
                 color: black;
             }
-            &:nth-child(3) {
+            &:nth-of-type(3) {
                 margin-top: 8vw;
             }
         }

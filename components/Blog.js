@@ -23,10 +23,26 @@ function Blog({dateNum,date,poster,tech,img,title}) {
 }
 
 const BlogStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    width: 100% !important;
+    margin: 5vh 0 !important;
+    height: 50vh !important;
+
+    img {
+        opacity: 0.1 !important;
+    }
+    p,a,h3 {
+        font-size: 3vh !important;
+    }
+    .poster {
+        justify-content: space-around !important;
+    }
+}
+
     width: 31%;
     height: 20vw;
     position: relative;
-    :hover img {
+    &:hover img {
         opacity: 0.3;
         transition: 1s;
     }
@@ -37,7 +53,7 @@ const BlogStyled = styled.div`
         object-fit: cover;
         opacity: 0.05;
         transition: 1s;
-        z-index: -1;
+        z-index: 1;
     }
     .inner-blog {
         width: 100%;

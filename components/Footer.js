@@ -13,7 +13,7 @@ function Footer() {
                     <p><span>Address:</span>BGD, 3khoroo, 71-81</p>
                     <p><span>Phone:</span>+976 95941551</p>
                 </div>
-                <h3 class='half-styled'>
+                <h3 className='half-styled'>
                     <span></span>
                     FOLLOW US
                 </h3>
@@ -30,7 +30,7 @@ function Footer() {
                 </div>
             </div>
             <div className='right'>
-                <h3 class='half-styled'>
+                <h3 className='half-styled'>
                 <span></span>
                  NEWS LATTER
                 </h3>
@@ -41,7 +41,7 @@ function Footer() {
                         <button>SUBSCRIBE</button>
                     </div>
                 </div>
-                <h3 class='half-styled'>
+                <h3 className='half-styled'>
                     <span></span>
                     SOCIAL POSTS
                 </h3>
@@ -54,6 +54,46 @@ function Footer() {
 }   
 
 const FooterStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    width: 100% !important;
+    flex-direction: column;
+    p, h3 {
+        font-size: 3vh !important;
+    }
+    .coloredbg,
+    .left,
+    .right,
+    .bottom {
+        width: 100% !important;
+        height: auto !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    img {
+        width: 6vh !important;
+        height: 6vh !important;
+    }
+    .social-accounts {
+        margin: 2vh 0 8vh 0 !important;
+        img {
+            margin: 0 3vh !important;
+        }
+    }
+    .email-box-container {
+        width: 90% !important;
+        margin-bottom: 5vh !important;
+        input, button {
+            padding: 2vh !important;
+            font-size: 2vh !important;
+        }
+    }
+    .bottom {
+        height: 8vh !important;
+        
+            font-size: 2vh !important;
+        
+    }
+}
     width: 65%;
     margin: 0 auto;
     padding-top: 5vw ;
@@ -64,7 +104,7 @@ const FooterStyled = styled.div`
     flex-wrap: wrap;
     position: relative;
     .coloredbg {
-        z-index: -1;
+        z-index: 1;
         position: absolute;
         background: #151921;
         width: 50vw;
@@ -79,7 +119,7 @@ const FooterStyled = styled.div`
         }
         width: 50%;
         height: 15vw;
-
+        z-index: 3;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -167,6 +207,7 @@ const FooterStyled = styled.div`
         display: grid;
         place-items: center;
         font-size: 0.6vw;
+        z-index: 2;
     }
 `
 export default Footer

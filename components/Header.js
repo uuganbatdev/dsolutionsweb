@@ -1,16 +1,16 @@
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 
-function Header() {
+// function Header() {
 
-      return (
+//       return (
 
-        <HeaderStyled>
-            <div>Header</div>
-        </HeaderStyled>
-    )
-}   
+//         <HeaderStyled>
+//             <div>Header</div>
+//         </HeaderStyled>
+//     )
+// }   
 
-const HeaderStyled = styled.div`
-
-`
-export default Header
+// const HeaderStyled = styled.div`
+//   position: absolute;
+// `
+// export default Header

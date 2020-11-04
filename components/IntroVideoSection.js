@@ -2,17 +2,44 @@ import styled from '@emotion/styled'
 import InfoNum from './InfoNum'
 
 function IntroVideoSection() {
+    const infoNums = [
+        {
+            src: 'smile.png',
+            num: '2400',
+            text: 'Happy Clints'
+        },
+        {
+            src: 'briefcase.png',
+            num: '133',
+            text: 'Complete Projects'
+        },        {
+            src: 'cloud-computing.png',
+            num: '254k',
+            text: 'Files Downloaded'
+        },
+        {
+            src: 'badge.png',
+            num: '46',
+            text: 'Award Win'
+        }
+    ] 
 
      const infoNumsD = []
       return (
 
         <IntroVideoSectionStyled>
-            <span className='background'></span>
+            <div className='background'>
+            <span className='inner-background'></span>
+            </div>
             <div className='infoNumsContainer'>
-                <InfoNum src='/smile.png' num='2400' text='Happy clients'/>
-                <InfoNum src='/briefcase.png' num='133' text='Complete Projects'/>
-                <InfoNum src='/cloud-computing.png' num='254k' text='Files Downloaded'/>
-                <InfoNum src='/badge.png' num='46' text='Award Win'/>  
+                {infoNums.map(info => {
+                    return <InfoNum 
+                    src={info.src} 
+                    num={info.num} 
+                    text={info.text}
+                    />
+
+                })}
             </div>
             <video  poster="https://today.duke.edu/sites/default/files/styles/story_hero/public/coding_HERO.jpg?itok=F8YWeHdH"
               width='500' height='400' >
@@ -23,16 +50,34 @@ function IntroVideoSection() {
 }   
 
 const IntroVideoSectionStyled = styled.div`
+@media only screen and (orientation:portrait) {
+    width: 95% !important;
+    .infoNumsContainer {
+        flex-direction: column;
+    }
+    video {
+        width: 100% !important;
+        height: 30vh !important;
+        border-radius: 2vh !important;
+    }
+}
     width: 65%;
     margin: 8vw auto;
     display: flex;
     flex-direction: column;
     position: relative;
+
     .background {
+        position: relative;
+        width: 100%;    
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .inner-background {
         position: absolute;
         left: -35%;
         top: -10%;
-        width: 130vw;
+        width: 120vw;
         height: 100%;
         z-index: -1;
         background: #11141b;
@@ -43,9 +88,7 @@ const IntroVideoSectionStyled = styled.div`
         flex-wrap: wrap;
         justify-content: center;
     }
-    .infoNumsContainer:last-child{
-        border-right: none !important;
-    }
+
     video {
         align-self: center;
         background: #76dbb5;
