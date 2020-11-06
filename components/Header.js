@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Link from 'next/link'
 
 function Header() {
 
@@ -8,30 +9,41 @@ function Header() {
             <div className='inner-header'>
             <img src="bolt.png" alt="logo"/>
             <nav>
+
                 <li>
-                    <a href="#">
-                        Home
-                    </a>
+                    <Link href='/'>
+                        <a>
+                            Home
+                        </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
-                        Showcases
-                    </a>
+                    <Link href='/'>
+                        <a>
+                            Showcases
+                        </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
-                        About
-                    </a>
+                    <Link href='/about'>
+                        <a>
+                            About
+                        </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
-                        Portfolio
-                    </a>
+                    <Link href='/'>
+                        <a>
+                            Portfolio
+                        </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
-                        Contact
-                    </a>
+                    <Link href='/'>
+                        <a>
+                            Contact
+                        </a>
+                    </Link>
                 </li>
 
             </nav>
@@ -43,20 +55,23 @@ function Header() {
 const HeaderStyled = styled.div`
   position: fixed;
   width: 100%;
-  background: #11141b;
-  z-index: 100;
+  background: rgba(17,20,27,0.8);
+  z-index: 100000;
   border-bottom: 0.2vw solid #181b21;
+  height: 6vw;
+  top: 0;
   .inner-header {
+      z-index: 100000;
       margin: 0 auto;
       width: 80%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+    height: 100%;
   }
   img {
       margin: 1.5vw 0;
-      height: 3vw;
+      height: 60%;
       object-fit: contain;
   }
   nav {
@@ -69,7 +84,7 @@ const HeaderStyled = styled.div`
              display: inline-block;
              height: 100%;
              width: 100%;
-             font-size: 1vw;
+             font-size: 0.85em;
              display: inline-flex;
              align-items: center;
              font-weight: 500;
