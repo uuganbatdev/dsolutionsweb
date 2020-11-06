@@ -61,7 +61,7 @@ const IntroVideoSectionStyled = styled.div`
         border-radius: 2vh !important;
     }
 }
-    width: 65%;
+    width: 80%;
     margin: 8vw auto;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@ const IntroVideoSectionStyled = styled.div`
         background: #76dbb5;
         position: relative;
         width: 80%;
-        height: 30vw;
+        height: 40vw;
         margin: 3vw;
         top: 5vw;
         border-radius: 1vw;

@@ -97,10 +97,10 @@ const OurWorskSectionStyled = styled.div`
         display: flex;
         flex-shrink: 0;
         flex-basis: 25%;
-
+        height: 35vw;
         .inner-slide {
             
-            width: 95%;
+            width: 90%;
             border-radius: 1vw;
             margin: 0 auto;
             background: #13161d;
@@ -109,7 +109,7 @@ const OurWorskSectionStyled = styled.div`
                 border-top-left-radius: 1vw;
                 border-top-right-radius: 1vw;                
                 width: 100%;
-                height: 75%;
+                height: 77%;
                 object-fit: cover;
             }
         }
@@ -118,7 +118,16 @@ const OurWorskSectionStyled = styled.div`
         }
         .description {
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto 8vw;
+            p {
+
+                letter-spacing: 0.1vw;
+                font-weight: 700;
+            }
+            h3 {
+                margin: 0;
+            }
+
         }
     }
     .swiper-wrapper {
@@ -128,7 +137,6 @@ const OurWorskSectionStyled = styled.div`
     }
     .swiper-container {
         width: 100%;
-        height: 100%;
         padding: 0;
         display: flex;
         justify-content: center;

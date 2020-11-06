@@ -6,7 +6,7 @@ function AboutUsSection() {
 
         <AboutUsSectionStyled>
             <div className='left'>
-                <h2>About Us</h2>
+                <h2>ABOUT US</h2>
                 <h3>Our 20 years working experience make a different business agency services.</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing
                  elit. Obcaecati perspiciatis sequi eius dicta molestiae. Animi voluptas
@@ -15,7 +15,9 @@ function AboutUsSection() {
 
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, velit.
                 </p>
-
+                <a href="#">
+                    KNOW MORE
+                </a>
             </div>
             <div className='right'>
                 <div className='image-wrapper'>
@@ -83,7 +85,7 @@ const AboutUsSectionStyled = styled.div`
         }
     }
 }
-    width: 65%;
+    width: 80%;
     margin: 6vw auto;
     display:flex;
     .left {
@@ -91,14 +93,30 @@ const AboutUsSectionStyled = styled.div`
         display: flex;
         justify-content: center;
         flex-direction: column;
+        font-size: 1.5em;
         p {
-            line-height: 1.5vw;
+            width: 95%;
+        }
+        h2 {
+            font-size: 1vw !important;
+            font-weight: 200;
+        }
+        h3 {
+            font-size: 1.5em;
+            font-weight: 400;
+            color: #75dab4;
             width: 90%;
         }
-
-        h3 {
-            color: #75dab4;
-            width: 70%;
+        a {
+            letter-spacing: 0.1vw;
+            font-size: 0.7em;
+            display: inline-block;
+            white-space: nowrap;
+            width: 3vw;
+            flex-grow: 0;
+            padding: 0.5vw;
+            background:#1f2229;
+            z-index: 2;
         }
     }
     .right {
@@ -108,7 +126,7 @@ const AboutUsSectionStyled = styled.div`
         align-items: center;
         position: relative;
         .image-wrapper {
-            width: 90%;
+            width: 95%;
             img {
                 width:100%;
                 height: 100%;
@@ -118,12 +136,12 @@ const AboutUsSectionStyled = styled.div`
         }
         .long-card {
             position: absolute;
-            top: 80%;
-            left: 15%;
+            top: 70%;
+            left: 10%;
             display: flex;
-            width: 90%;
+            width: 95%;
             background: #11141b;
-            padding: 3vw 1vw;
+            padding: 4vw 1vw;
             border-radius: 1vw;
             box-shadow: 0px 0.6vw 1.2vw -0.3vw rgba(52, 60, 70, 0.1);
             .long-card-left,
@@ -138,6 +156,7 @@ const AboutUsSectionStyled = styled.div`
                 }
             }
         }
+        
     }
 `
 export default AboutUsSection

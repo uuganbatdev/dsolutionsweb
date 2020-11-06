@@ -28,7 +28,8 @@ const InfoNumStyled = styled.div`
     align-items: center;
     width: 25%;
     p {
-        font-size: 1vw;
+        font-weight: 300;
+        letter-spacing: 0.2vw;
         margin: 0.6vw;
     }
     .num {
@@ -37,7 +38,7 @@ const InfoNumStyled = styled.div`
     img {
         position: absolute;
         opacity: 0.1;
-        width: 3vw;
+        width: 4.5vw;
     }
     border-right: 0.1vw solid #76dbb5;
 

@@ -3,7 +3,7 @@ import { Global, css } from '@emotion/core'
 const GlobalStyles = () => (
     <>
         <Global styles={css`
-            @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600&display=swap');
             @media only screen and (orientation:portrait) {
                 body {
                     font-size: 2vh !important;
@@ -31,14 +31,21 @@ const GlobalStyles = () => (
                 padding: 0;
                 background: #0c0f16;
                 color: white;
-                font-family: 'Open Sans Condensed', sans-serif;
+                font-family: 'Barlow Condensed', sans-serif;
                 font-size: 1.1vw;
-                letter-spacing: 0.05vw;
+            }
+            p{
+                font-weight: 200;
             }
             a {
                 color: white;
                 text-decoration: none;
                 display: inline-block;
+                font-weight: 200;
+            }
+            h2 {
+                font-size: 5.5vw !important;
+                letter-spacing: 0.3vw;
             }
         `}/>
     </>

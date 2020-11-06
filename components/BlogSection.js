@@ -16,7 +16,7 @@ function BlogSection() {
             poster: 'admin',
             usedTech: 'nextjs',
             bgImg: 'https://i.ytimg.com/vi/hJiEoOvvIlk/maxresdefault.jpg',
-            title: 'The Start-Up Ultimate Guide to Make your WordPress Journal he Start-Up Ultimate Guide to Make your WordPress Journ'   
+            title: 'The Start-Up Ultimate -Up Ultimate Guide to Make your WordPress Journ'   
         },
         {
             date: ['06', 'AUG 2019'],
@@ -57,7 +57,7 @@ const BlogSectionStyled = styled.div`
         margin: 5vh 0 !important;
     }
 }
-    width: 65%;
+    width: 80%;
     margin: 5vw auto;
     display: flex;
     flex-direction: column;

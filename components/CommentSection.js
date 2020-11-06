@@ -113,10 +113,12 @@ const CommentSectionStyled = styled.div`
         margin: 0 auto;
     }
     .text {
-        width: 50%;
+        width: 60%;
         text-align: center;
-        line-height: 1.5vw;
-        font-size: 1vw;
+        font-size: 1.5em;
+        letter-spacing: 0.07vw;
+        font-weight: 300;
+        opacity: 0.7;
     }
     .info {
         margin-bottom: 2vw;
@@ -137,7 +139,7 @@ const CommentSectionStyled = styled.div`
             font-size: 4vw;
             text-align: center;
             text-shadow: 0 8px rgba(255, 255, 255, 0.05);
-            margin-bottom: 5vw;
+            margin-bottom: 2.5vw;
         }
     }
     .slide {
@@ -180,9 +182,9 @@ const CommentSectionStyled = styled.div`
         .swiper-pagination-bullet {
             width: 0.5vw;
             height: 0.5vw;
+            border: 0.1vw solid white; 
             border-radius: 50%;
-            background: white;
-            margin: 0.1vw;
+            margin: 0.4vw;
             opacity: 0.5;
             transition: 0.3s;
             cursor: pointer;

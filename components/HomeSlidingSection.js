@@ -136,20 +136,19 @@ const HomeSlidingSectionStyled = styled.div`
     }
     .swiper-button-prev,
     .swiper-button-next {
-        width: 3.5vw;
-        height: 3.5vw;
-        background: red;
+        width: 4vw;
+        height: 4vw;
         position: absolute;
         z-index: 10;
-        background: white;
+        border: 0.1vw solid rgba(255,255,255,0.5);
         cursor: pointer;
         font-size: 1vw;
-        bottom: 3vw;
-        right: 3vw;
+        bottom: 5vw;
+        right: 4vw;
     } 
     .swiper-button-prev {
-        bottom: 7vw;
-        color: black;
+        bottom: 9.5vw;
+        color: rgba(255,255,255,0.8);
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -161,7 +160,7 @@ const HomeSlidingSectionStyled = styled.div`
     }
     .swiper-button-next {
 
-        color: black;
+        color: rgba(255,255,255,0.8);
         display: inline-flex;
         justify-content: center;
         align-items: center;

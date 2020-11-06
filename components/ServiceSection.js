@@ -5,7 +5,7 @@ function ServiceSection() {
       return (
 
         <ServiceSectionStyled>
-            <h2>Services.</h2>
+            <h2>SERVICES.</h2>
             <div className='cards-container'>
                 <div className='card'>
                     <img src="/bolt.png" alt="bolt"/>
@@ -68,7 +68,7 @@ const ServiceSectionStyled = styled.div`
         }
     }
 
-    width: 65%;
+    width: 80%;
     margin: 10vw auto;
     display: flex;
     overflow-x: hidden;
@@ -80,12 +80,16 @@ const ServiceSectionStyled = styled.div`
         text-shadow: 0 8px rgba(255, 255, 255, 0.05);
     }
     a {
-        background: #181b22;
-        width: 9vw;
-        height: 3vw;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        word-spacing: 0.3vw;
+        display: inline-block;
+        white-space: nowrap;
+            width: 3vw;
+            flex-grow: 0;
+            padding: 0.5vw;
+            background:#1f2229;
+            z-index: 2;
+            letter-spacing: 0.1vw;
+            font-weight: 400;
     }
     .cards-container {
         width: 100%;
@@ -94,15 +98,17 @@ const ServiceSectionStyled = styled.div`
         .card {
             background:#151921;
             width: 31%;
-            height: 16vw;
+            height: 20vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 2vw;
+            font-size: 1.2em;
             h3 {
                 text-align: center;
                 margin: 1vw;
+                letter-spacing: 0.1vw;
             }
             img {
                 width: 2vw;

@@ -94,11 +94,10 @@ const FooterStyled = styled.div`
         
     }
 }
-    width: 65%;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 5vw ;
-    padding-bottom: 5vw ;
-    font-size: 0.9vw;
+    padding-top: 8vw ;
+    padding-bottom: 8vw ;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -147,7 +146,7 @@ const FooterStyled = styled.div`
         }
     }
     .right {
-        width: 35%;
+        width: 40%;
         height: 20vw;
         display: flex;
         flex-direction: column;
@@ -155,9 +154,8 @@ const FooterStyled = styled.div`
             margin: 0;
         }
         .email-box-container {
-            margin: 1.5vw 0 2vw 0;
+            margin: 1.5vw 0 3vw 0;
             p {
-                font-size: 0.8vw;
             }
             .inner-box {
                 display: flex;
@@ -165,7 +163,7 @@ const FooterStyled = styled.div`
                     border: none;
                 }
                 input {
-                    padding: 0.5vw;
+                    padding: 1vw;
                     background: #14171e;
                     color: white;
                     width: 70%;
@@ -186,17 +184,17 @@ const FooterStyled = styled.div`
     }
     .half-styled {
         position: relative;
-            font-size: 0.9vw;
-            span {
-                display: inline-block;
-                background:#1d2027;
-                width: 4vw;
-                height: 1.7vw;
-                position: absolute;
-                z-index: -1;
-                top: -0.25vw;
-                left: -1vw;
-            }
+            font-size: 0.9em;
+            letter-spacing: 0.2vw;
+            font-size: 0.7em;
+            display: inline-block;
+            white-space: nowrap;
+            width: 2vw;
+            flex-grow: 0;
+            padding: 0.5vw;
+            background:#1f2229;
+            z-index: 2;
+            font-weight: 200;
     }
     .bottom {
         position: absolute;
@@ -206,8 +204,9 @@ const FooterStyled = styled.div`
         height: 5vw;
         display: grid;
         place-items: center;
-        font-size: 0.6vw;
+        font-size: 0.8vw;
         z-index: 2;
+        letter-spacing: 0.3vw;
     }
 `
 export default Footer

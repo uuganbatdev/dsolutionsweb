@@ -38,9 +38,14 @@ const BlogStyled = styled.div`
         justify-content: space-around !important;
     }
 }
-
+    &:nth-of-type(1),
+    &:nth-of-type(3) {
+        background: #13161d;
+        img {
+            opacity: 0;
+        }
+    }
     width: 31%;
-    height: 20vw;
     position: relative;
     &:hover img {
         opacity: 0.3;
@@ -58,7 +63,7 @@ const BlogStyled = styled.div`
     .inner-blog {
         width: 100%;
         height: 100%;
-        padding: 3vw 2vw;
+        padding: 5vw 2vw 3vw;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -66,6 +71,7 @@ const BlogStyled = styled.div`
         .date {
             margin: 0;
             .datenum {
+                font-weight: 700;
                 font-size: 2vw;
                 margin: 0;
                 line-height: 0;
@@ -75,8 +81,9 @@ const BlogStyled = styled.div`
             display: flex;
             align-items: center;
             justify-content: left;
+            font-weight: 200;
             h3 {
-                font-size: 0.9vw;
+                font-weight: 400;
             }
             p {
                 color: #75dab4;
@@ -85,13 +92,18 @@ const BlogStyled = styled.div`
         }
         .title {
             margin: 1vw 0;
+            letter-spacing: 0.1vw;
+            font-size: 1.2em;
+            font-weight: 700;
         }
         a {
+            letter-spacing: 0.1vw;
+            display: inline-block;
+            white-space: nowrap;
+            width: 3vw;
             flex-grow: 0;
-            flex-shrink: 0;
-            align-self: center;
             padding: 0.5vw;
-            background:#0c0f16;
+            background:#1f2229;
             z-index: 2;
         }
     }
