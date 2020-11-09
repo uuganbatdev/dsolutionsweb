@@ -18,26 +18,13 @@ function Header() {
                     </Link>
                 </li>
                 <li>
-                    <Link href='/'>
-                        <a>
-                            Showcases
-                        </a>
-                    </Link>
-                </li>
-                <li>
                     <Link href='/about'>
                         <a>
                             About
                         </a>
                     </Link>
                 </li>
-                <li>
-                    <Link href='/'>
-                        <a>
-                            Portfolio
-                        </a>
-                    </Link>
-                </li>
+
                 <li>
                     <Link href='/'>
                         <a>
@@ -84,7 +71,7 @@ const HeaderStyled = styled.div`
              display: inline-block;
              height: 100%;
              width: 100%;
-             font-size: 0.85em;
+             font-size: 0.75em;
              display: inline-flex;
              align-items: center;
              font-weight: 500;

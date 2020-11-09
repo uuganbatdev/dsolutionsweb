@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay, Pagination} from 'swiper';
+import Wave from './Wave'
 
 SwiperCore.use([Navigation, Autoplay, Pagination]);
 
@@ -26,7 +27,7 @@ function HomeSlidingSection() {
     return (
 
         <HomeSlidingSectionStyled >
-                <Swiper
+                {/* <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
@@ -47,7 +48,8 @@ function HomeSlidingSection() {
                             </div>
                            </SwiperSlide>
                         })}
-                </Swiper>
+                </Swiper> */}
+                <Wave />
         </HomeSlidingSectionStyled>
     )
 }   
