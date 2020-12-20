@@ -1,52 +1,68 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
+import {useEffect } from 'react' 
 
 function Header() {
-
+    useEffect(() => {
+        let header = document.querySelector('.header');
+        window.onscroll = () => {
+            if( window.scrollY > window.innerHeight / 10 ) {
+               header.classList.add('fill-header');
+            } else header.classList.remove('fill-header')
+        }
+    }) 
       return (
 
         <HeaderStyled>
-            <div className='inner-header'>
-            <img src="bolt.png" alt="logo"/>
-            <nav>
-
-                <li>
-                    <Link href='/'>
-                        <a>
-                            Home
-                        </a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href='/about'>
-                        <a>
-                            About
-                        </a>
-                    </Link>
-                </li>
-
-                <li>
-                    <Link href='/'>
-                        <a>
-                            Contact
-                        </a>
-                    </Link>
-                </li>
-
-            </nav>
+            <div className='header'>
+                <div className='inner-header'>
+                <img src="bolt.png" alt="logo"/>
+                <nav>
+                    <li>
+                        <Link href='/'>
+                            <a>
+                                Home
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/about'>
+                            <a>
+                                About
+                            </a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/'>
+                            <a>
+                                Contact
+                            </a>
+                        </Link>
+                    </li>
+                    
+                </nav>
+                </div>
             </div>
         </HeaderStyled>
+
     )
 }   
 
 const HeaderStyled = styled.div`
-  position: fixed;
-  width: 100%;
-  background: rgba(17,20,27,0.8);
-  z-index: 100000;
-  border-bottom: 0.2vw solid #181b21;
-  height: 6vw;
-  top: 0;
+      position: fixed;
+      z-index: 100000;
+      width: 100%;
+  .header {
+      width: 100%;
+      border-bottom: 0.1vw solid rgba(255,255,255,0.3);
+      height: 5.5vw;
+      top: 0;
+      transition: 0.5s;
+  }
+  .fill-header {
+    background: #11141b;
+    transition: 0.5s;
+  }
   .inner-header {
       z-index: 100000;
       margin: 0 auto;

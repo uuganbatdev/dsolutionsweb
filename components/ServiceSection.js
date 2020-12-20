@@ -1,27 +1,35 @@
 import styled from '@emotion/styled'
+import Card from './Card.js'
+
 
 function ServiceSection() {
-
+        let cards = [
+            {
+                img: '/bolt.png',
+                heading : 'Digital Marketing',
+                parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
+            },
+            {
+                img: '/mobile-phone.png',
+                heading : 'Mobile Development',
+                parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
+            },
+            {
+                img: '/magic-wand.png',
+                heading : 'Fast Service',
+                parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
+            }
+        ]
       return (
-
         <ServiceSectionStyled>
             <h2>SERVICES.</h2>
             <div className='cards-container'>
-                <div className='card'>
-                    <img src="/bolt.png" alt="bolt"/>
-                    <h3>Digital Marketing</h3>
-                    <p>Tempore corrupti ore corrupti tempor temporibus fuga earum asperiores fugit laudantium.</p>
-                </div>
-                <div className='card colored'>
-                    <img src="/mobile-phone.png" alt="bolt"/>
-                    <h3>Web & App Development</h3>
-                    <p>Tempore corrupti  ore corrupti tempor temporibus fuga earum asperiores fugit laudantium.</p>
-                </div>
-                <div className='card'>
-                    <img src="/magic-wand.png" alt="bolt"/>
-                    <h3>Web & App Development</h3>
-                    <p>Tempore corrupti tore corrupti temporemporibus fuga earum asperiores fugit laudantium.</p>
-                </div>
+                {cards.map(({img,heading,parag,colored,position}) => 
+                    <Card 
+                        img={img}
+                        heading={heading}
+                        parag={parag}/>
+                    )}
             </div>
             <a href="#">
                 DISCOVER MORE
@@ -42,24 +50,6 @@ const ServiceSectionStyled = styled.div`
         h2 {
 
             margin: 5vh auto!important;
-        }
-        .card {
-            width: 100% !important;
-            height: auto !important;
-            padding: 4vh 0 !important;
-            margin: 3vh 0!important;
-            img {
-                width: 5vh !important;
-                height: 5vh !important;
-            }
-            p {
-                line-height: normal !important;
-                width: 50% !important;
-            }
-            &:nth-of-type(2),
-            &:nth-of-type(3) {
-                margin-top: 0 !important;
-            }
         }
         a {
             margin-top: 2vh !important;
@@ -95,37 +85,11 @@ const ServiceSectionStyled = styled.div`
         width: 100%;
         display: flex;
         justify-content: space-between;
-        .card {
-            background:#151921;
-            width: 31%;
-            height: 20vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2vw;
-            font-size: 1.2em;
-            h3 {
-                text-align: center;
-                margin: 1vw;
-                letter-spacing: 0.1vw;
-            }
-            img {
-                width: 2vw;
-            }
-            p {
-                line-height: 1.5vw;
-                text-align: center;
-                width: 80%;
-            }
-            &:nth-of-type(2) {
-                margin-top: 4vw;
-                background: #76dbb5;
-                color: black;
-            }
-            &:nth-of-type(3) {
-                margin-top: 8vw;
-            }
+        & > div:nth-of-type(2) {
+            margin-top: 4vw;
+        }
+        & > div:nth-of-type(3) {
+            margin-top: 8vw;
         }
     }
 

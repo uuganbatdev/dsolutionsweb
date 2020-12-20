@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 function Blog({dateNum,date,poster,tech,img,title}) {
     return (
         <BlogStyled>
-            <img src={img} alt={img}/>
+           <img src={img} alt={img}/>
            <div className='inner-blog'>
                  <div className='date'>
                     <p className='datenum'>{dateNum}</p>

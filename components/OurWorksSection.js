@@ -49,22 +49,22 @@ function OurWorkSection() {
         <OurWorskSectionStyled>
             <h2>OUR WORKS.</h2>
                 <Swiper
-                spaceBetween={0}
-                slidesPerView={decideSlidePV}
-                loop={true}
-                navigation
+                    spaceBetween={0}
+                    slidesPerView={decideSlidePV}
+                    loop={true}
+                    navigation
                 >
-                {projectsSlides.map(slide => {
-                    return <SwiperSlide className='slide'>                             
-                                <div className='inner-slide'>
-                                    <img src={slide.imgSrc} alt={slide.imgSrc}/>
-                                    <div className='description'>
-                                        <p>{slide.text}</p>
-                                        <h3>{slide.title}</h3>
-                                    </div>
-                                 </div>
-                               </SwiperSlide>
-                            })}
+                {projectsSlides.map(slide => 
+                    <SwiperSlide className='slide'>                             
+                        <div className='inner-slide'>
+                            <img src={slide.imgSrc} alt={slide.imgSrc}/>
+                            <div className='description'>
+                                <p>{slide.text}</p>
+                                <h3>{slide.title}</h3>
+                            </div>
+                         </div>
+                    </SwiperSlide>
+                )}
                 </Swiper>
         </OurWorskSectionStyled>
     )

@@ -44,10 +44,10 @@ export default function Home() {
       <OurWorksSection />
       <CommentSection />
       <BlogSection />
-        <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/plugins0a05.js?ver=20170620'></script>
-  	    <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/main0a05.js?ver=20170620'></script>
-	      <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/three.min3469.js?ver=20170318'></script>
-	      <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/hero0a05.js?ver=20170620'></script>
+      <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/plugins0a05.js?ver=20170620'></script>
+  	  <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/main0a05.js?ver=20170620'></script>
+	  <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/three.min3469.js?ver=20170318'></script>
+	  <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/hero0a05.js?ver=20170620'></script>
     </>
   )
 }

@@ -8,12 +8,12 @@ function AboutUsSection() {
             <div className='left'>
                 <h2>ABOUT US</h2>
                 <h3>Our 20 years working experience make a different business agency services.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                 elit. Obcaecati perspiciatis sequi eius dicta molestiae. Animi voluptas
-                  distinctio quod veritatis, vero eveniet laudantium consectetur sit expedita 
-                  iusto quaerat sapiente, perferendis adipisci.
-
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, velit.
+                <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing
+                     elit. Obcaecati perspiciatis sequi eius dicta molestiae. Animi voluptas
+                      distinctio quod veritatis, vero eveniet laudantium consectetur sit expedita 
+                      iusto quaerat sapiente, perferendis adipisci.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, velit.
                 </p>
                 <a href="#">
                     KNOW MORE

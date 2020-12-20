@@ -33,7 +33,6 @@ const commentData = [
 function CommentSection() {
 
       return (
-
         <CommentSectionStyled>
             <div className='inner-comment'>
                 <div className='head'>
@@ -41,21 +40,21 @@ function CommentSection() {
                     <h2>TESTIMONIALS.</h2>
                 </div>
                 <Swiper
-                spaceBetween={0}
-                slidesPerView={1}
-                loop={true}
-                autoplay={true}
-                pagination={{ clickable: true }}
-                navigation
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={true}
+                    pagination={{ clickable: true }}
+                    navigation
                 >
-                {commentData.map(slide => {
-                    return <SwiperSlide className='slide'>                             
-                                <p className='text'>{slide.text}</p>
-                                <img src={slide.profileImg} alt={slide.profileImg}/>
-                                <h3>{slide.name}</h3>
-                                <p className='info'>{slide.info}</p>
-                               </SwiperSlide>
-                            })}
+                    {commentData.map(slide => 
+                       <SwiperSlide className='slide'>                             
+                            <p className='text'>{slide.text}</p>
+                            <img src={slide.profileImg} alt={slide.profileImg}/>
+                            <h3>{slide.name}</h3>
+                            <p className='info'>{slide.info}</p>
+                       </SwiperSlide>
+                    )}
                 </Swiper>
             </div>
         </CommentSectionStyled>

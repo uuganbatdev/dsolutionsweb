@@ -22,7 +22,7 @@ function BlogSection() {
             date: ['06', 'AUG 2019'],
             poster: 'admina',
             usedTech: 'nextjs',
-        bgImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNOF-V23beuuSnDYMRN0oIOaQcF8LSaWjimQ&usqp=CAU',
+            bgImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNOF-V23beuuSnDYMRN0oIOaQcF8LSaWjimQ&usqp=CAU',
             title: 'The Start-Up Ultimate Guide to Make your WordPress Journal'   
         }
     ]
@@ -33,15 +33,16 @@ function BlogSection() {
                     <h2>OUR BLOGS.</h2>
                 </div>
                 <div className='blogs-container'>
-                    {lastBlogs.map(blog => {
-                        return <Blog
-                        dateNum={blog.date[0]}
-                        date={blog.date[1]}
-                        poster={blog.poster}
-                        tech={blog.usedTech}
-                        img={blog.bgImg}
-                        title={blog.title} />
-                    })}
+                    {lastBlogs.map(blog => 
+                        <Blog
+                            dateNum={blog.date[0]}
+                            date={blog.date[1]}
+                            poster={blog.poster}
+                            tech={blog.usedTech}
+                            img={blog.bgImg}
+                            title={blog.title} 
+                        />
+                    )}
                 </div>
         </BlogSectionStyled>
     )

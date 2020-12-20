@@ -24,22 +24,19 @@ function IntroVideoSection() {
         }
     ] 
 
-     const infoNumsD = []
       return (
-
         <IntroVideoSectionStyled>
             <div className='background'>
-            <span className='inner-background'></span>
+                <span className='inner-background'></span>
             </div>
             <div className='infoNumsContainer'>
-                {infoNums.map(info => {
-                    return <InfoNum 
-                    src={info.src} 
-                    num={info.num} 
-                    text={info.text}
+                {infoNums.map(info => 
+                    <InfoNum 
+                        src={info.src} 
+                        num={info.num} 
+                        text={info.text}
                     />
-
-                })}
+                )}
             </div>
             <video  poster="https://today.duke.edu/sites/default/files/styles/story_hero/public/coding_HERO.jpg?itok=F8YWeHdH"
               width='500' height='400' >
@@ -93,11 +90,11 @@ const IntroVideoSectionStyled = styled.div`
         align-self: center;
         background: #76dbb5;
         position: relative;
-        width: 80%;
-        height: 40vw;
+        width: 70%;
+        height: 35vw;
         margin: 3vw;
         top: 5vw;
-        border-radius: 1vw;
+        border-radius: 0.3vw;
         box-shadow: 0px 2vw 2.5vw 3vw rgba(52,60,70,0.1);
         object-fit: cover;
     }
