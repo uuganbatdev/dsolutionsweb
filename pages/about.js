@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import PaboutIntroSection from '../components/PaboutIntroSection.js'
 import PaboutCommentSection from '../components/PaboutCommentSection.js'
 import PaboutOurTeamSection from '../components/PaboutOurTeamSection.js'
+import PaboutOurPurposeSection from '../components/PaboutOurPurposeSection.js'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay, Pagination} from 'swiper';
 SwiperCore.use([Navigation, Autoplay, Pagination]);
@@ -40,29 +42,7 @@ function About() {
         <PaboutIntroSection />
 		<PaboutCommentSection />
 		<PaboutOurTeamSection />
-            <div className='our-purpose'>
-                <div className='our-purpose-left'>
-                    <img src="https://skepp.com/assets/Uploads/_resampled/ScaleWidthWyIxODAwIl0/IMG-2227.jpg" alt="office"/>
-                </div>
-                <div className='our-purpose-right'>
-                    <h2>
-                        About us.
-                    </h2>
-                    <p>Our creative Ad agency is ranked among the finest in the US. We cultivate smart ideas for start-ups and seasoned players. </p>
-                    <div className='our-purposes'>
-                        <h3>Our Mission</h3>
-                        <p>luctus massa ipsum at tempus eleifend congue lectus bibendum</p>
-                    </div>
-                    <div className='our-purposes'>
-                        <h3>Our Goals</h3>
-                        <p>luctus massa ipsum at tempus eleifend congue lectus bibendum</p>
-                    </div>
-                    <div className='our-purposes'>
-                        <h3>Why Us?</h3>
-                        <p>luctus massa ipsum at tempus eleifend congue lectus bibendum</p>
-                    </div>
-                </div>
-            </div>
+		<PaboutOurPurposeSection />
             <div className='our-clients'>
                 <div className='our-clients-left'>
                      <p>CLIENTS</p>

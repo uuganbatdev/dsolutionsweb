@@ -3,8 +3,8 @@ import { Global, css } from '@emotion/core'
 const GlobalStyles = () => (
     <>
         <Global styles={css`
-            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
             @media only screen and (orientation:portrait) {
                 body {
                     font-size: 2vh !important;
