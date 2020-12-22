@@ -79,7 +79,7 @@ const PaboutOurPurposeSectionStyled = styled.div`
 			width: 54%;
 			height: 78%;
 			padding: 5vw;
-			padding-top: 1vw;
+			padding-top: 3vw;
 			li {
 				&::marker {
 					background: red;
@@ -88,6 +88,8 @@ const PaboutOurPurposeSectionStyled = styled.div`
 			h2 {
 				font-family: 'Barlow Condensed', sans-serif;
 				font-weight: bold;
+				font-size: 2.5em !important;
+				margin: 0;
 			}
 			p {
 				font-size: 0.85em;

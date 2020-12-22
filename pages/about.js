@@ -3,6 +3,7 @@ import PaboutIntroSection from '../components/PaboutIntroSection.js'
 import PaboutCommentSection from '../components/PaboutCommentSection.js'
 import PaboutOurTeamSection from '../components/PaboutOurTeamSection.js'
 import PaboutOurPurposeSection from '../components/PaboutOurPurposeSection.js'
+import PaboutOurClientsSection from '../components/PaboutOurClientsSection.js'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay, Pagination} from 'swiper';
@@ -43,38 +44,7 @@ function About() {
 		<PaboutCommentSection />
 		<PaboutOurTeamSection />
 		<PaboutOurPurposeSection />
-            <div className='our-clients'>
-                <div className='our-clients-left'>
-                     <p>CLIENTS</p>
-                     <h2>OUR CLIENTS.</h2>
-                </div>
-                <div className='our-clients-right'>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                    <div className='client'>
-                            <img src="apple.png" alt="CLOGO"/>
-                    </div>
-                </div>
-            </div>
+		<PaboutOurClientsSection />
             <div className='connet-us'>
                 <div className='cs-left'>
                     <p>Let’s Talk</p>
