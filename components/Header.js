@@ -32,13 +32,6 @@ function Header() {
                             </a>
                         </Link>
                     </li>
-                    <li>
-                        <Link href='/'>
-                            <a>
-                                Contact
-                            </a>
-                        </Link>
-                    </li>
                     
                 </nav>
                 </div>
@@ -49,7 +42,7 @@ function Header() {
 }   
 
 const HeaderStyled = styled.div`
-      position: fixed;
+      position: absolute;
       z-index: 100000;
       width: 100%;
   .header {

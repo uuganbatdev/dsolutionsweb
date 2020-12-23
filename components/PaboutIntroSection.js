@@ -6,17 +6,17 @@ function PaboutIntroSection() {
         {
             img: '/bolt.png',
             heading : 'Digital Marketing',
-            parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
+            parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ',
         },
         {
             img: '/mobile-phone.png',
             heading : 'Mobile Development',
-            parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
+            parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ',
         },
         {
             img: '/magic-wand.png',
             heading : 'Fast Service',
-            parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
+            parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ',
         }
     ]
     

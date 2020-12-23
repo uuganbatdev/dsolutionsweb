@@ -19,13 +19,13 @@ function Footer() {
                 </h3>
                 <div className='social-accounts'>
                     <a href="#">
-                        <img src="facebook-logo.png" alt="facebook"/>
+                        <img src="facebook.png" alt="facebook"/>
                     </a>
                     <a href="#">
                         <img src="instagram.png" alt="instagram"/>
                     </a>
                     <a href="#">
-                        <img src="twitter.png" alt="twitter"/>
+                        <img src="linkedin.png" alt="twitter"/>
                     </a>
                 </div>
             </div>
@@ -137,11 +137,31 @@ const FooterStyled = styled.div`
         .social-accounts {
             display: flex;
             justify-content: left;
+			a {
+				width: 3vw;
+				height: 3vw;
+				position: relative;
+				margin: 0 1vw;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background: #181c24;
+					border-radius: 50%;
+				}
+			}
             img {
-                width: 1.2vw;
-                height: 1.2vw;
+				position: absolute;
+				top:50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				z-index: 2;
+				width: 1vw;
+				height: 1vw;
                 object-fit: contain;
-                margin: 0 1vw;
             }
         }
     }

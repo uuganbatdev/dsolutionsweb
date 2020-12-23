@@ -27,25 +27,29 @@ const CardStyled = styled.div`
            } 
             background:#151921;
             width: 31%;
-            height: 20vw;
+            height: 23vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2vw;
-            font-size: 1.2em;
+            padding: 2.5vw;
             h3 {
+				font-family:  'Poppins', sans-serif;
+				font-weight: bolder;
                 text-align: center;
-                margin: 1vw;
-                letter-spacing: 0.1vw;
+                margin-top: 2vw;
+				margin-bottom: 0.8vw;
             }
             img {
-                width: 2vw;
+                width: 2.5vw;
             }
             p {
-                line-height: 1.5vw;
+				line-height: 1.8em;
+				opacity: 0.7;
+				font-weight: 300;
+				font-family: 'Poppins', sans-serif;
+				margin-top: 0;	
                 text-align: center;
-                width: 80%;
             }
             &:nth-of-type(2) {
                 background: #76dbb5;

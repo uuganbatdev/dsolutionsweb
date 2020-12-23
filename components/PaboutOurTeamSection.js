@@ -10,25 +10,25 @@ function PaboutOurTeamSection() {
 			profileImg: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 			name: 'Alex Regelman',
 			text: "Lorem ipsum dolaperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
-			info: 'Co-founder, Colabrio'
+			info: 'Co-founder, Colabrio',
 		},
 		{
 			profileImg: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 			name: 'Alex Regelman',
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum aperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
-			info: 'Co-founder, Colabrio'
+			info: 'Co-founder, Colabrio',
 		},
 		{
 			profileImg: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 			name: 'Alex Regelman',
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum aperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
-			info: 'Co-founder, Colabrio'
+			info: 'Co-founder, Colabrio',
 		},
 		{
 			profileImg: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 			name: 'Alex Regelman',
 			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum aperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
-			info: 'Co-founder, Colabrio'
+			info: 'Co-founder, Colabrio',
 		}
 	]
 
@@ -162,14 +162,16 @@ const PaboutOurTeamSectionStyled = styled.div`
 								height: 100%;
 								background: #0c0f16;
 								text-align: center;
+								font-family: 'Poppins', sans-serif;
 								h3 {
+									font-size: 1em;
 									margin-bottom: 0;
-									letter-spacing: .1vw;
 								}
 								p {
+									font-size: 0.9em;
 									margin-top: 0.5vw;
-									opacity: 0.4;
-									font-weight: bold;
+									opacity: 0.5;
+									font-weight: 400;
 								}
 							}
 							img {

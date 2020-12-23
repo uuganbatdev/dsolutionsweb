@@ -81,9 +81,10 @@ const PaboutOurClientsSectionStyled = styled.div`
 				font-weight: 400;
 			}
 			h2 {
+				font-family: 'Barlow Condensed', sans-serif;
 				text-shadow: 0 0.5vw rgba(255, 255, 255, 0.05);
 				margin-top: 1vw;
-				font-size: 4em !important;
+				font-size: 5em !important;
 			}
 		}
 		.our-clients-right {

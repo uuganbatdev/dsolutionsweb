@@ -85,6 +85,7 @@ const ServiceSectionStyled = styled.div`
         width: 100%;
         display: flex;
         justify-content: space-between;
+		margin: 4vw 0;
         & > div:nth-of-type(2) {
             margin-top: 4vw;
         }

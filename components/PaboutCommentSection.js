@@ -1,4 +1,6 @@
 import styled from '@emotion/styled'
+import LittleCard from './LittleCard.js'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay, Pagination} from 'swiper';
 SwiperCore.use([Navigation, Autoplay, Pagination]);
@@ -31,6 +33,22 @@ function PaboutCommentSection() {
 			info: 'Co-founder, Colabrio'
 		}
 	]
+
+	const statistics = [
+		{
+			img: '/bolt.png',
+			parag: 'CREATIVE DESIGN'
+		},	
+		{
+			img: '/bolt.png',
+			parag: 'PIXEL PERFECT'
+		},
+		{
+			img: '/bolt.png',
+			parag: 'HEIGHT PERFORMANCE'
+		}
+	]
+
 	return(
 		<PaboutCommentSectionStyled>
                 <img src="http://innovationplans.com/idesign/avo2/avo-dark/img/slid/1.jpg"  alt="bgiamge" className='bg-image'/>
@@ -42,14 +60,9 @@ function PaboutCommentSection() {
                         So that's us. There's no other way to put it.
                     </h2>
                     <div className='statistics'>
-                        <div className='inner-statistics'>
-                            <p>Project</p>
-                            <h3>Consulting</h3>
-                        </div>
-                        <div className='inner-statistics'>
-                            <p>App</p>
-                            <h3>Development</h3>
-                        </div>
+						{statistics.map(({img, parag}) => 
+							<LittleCard img={img} parag={parag} />
+						)}
                     </div>
                 </div>
             <div className='comment-right'>
@@ -147,6 +160,7 @@ const PaboutCommentSectionStyled = styled.div`
                 }
                 .statistics {
                     display: flex;
+					justify-content: center;
                     .inner-statistics {
                         width: 50%;
                         display: flex;

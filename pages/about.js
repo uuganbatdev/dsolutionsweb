@@ -4,6 +4,7 @@ import PaboutCommentSection from '../components/PaboutCommentSection.js'
 import PaboutOurTeamSection from '../components/PaboutOurTeamSection.js'
 import PaboutOurPurposeSection from '../components/PaboutOurPurposeSection.js'
 import PaboutOurClientsSection from '../components/PaboutOurClientsSection.js'
+import PaboutConnectUsSection from '../components/PaboutConnectUsSection.js'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Autoplay, Pagination} from 'swiper';
@@ -45,15 +46,7 @@ function About() {
 		<PaboutOurTeamSection />
 		<PaboutOurPurposeSection />
 		<PaboutOurClientsSection />
-            <div className='connet-us'>
-                <div className='cs-left'>
-                    <p>Let’s Talk</p>
-                    <h2>ABOUT YOUR NEXT PROJECT.</h2>
-                </div>
-                <a href="#">
-                    Get InTouch
-                </a>
-            </div>
+		<PaboutConnectUsSection />
     </AboutStyled>
     )
 }
