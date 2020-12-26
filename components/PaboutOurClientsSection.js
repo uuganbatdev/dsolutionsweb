@@ -97,5 +97,24 @@ const PaboutOurClientsSectionStyled = styled.div`
 			justify-content: center;
 		}	
 	}
+	@media only screen and (orientation:portrait) {
+		height: auto;
+		.bg {
+			width: 110vw;
+			height: 100%;
+		}	
+		h2 {
+			margin-bottom: 1vh;
+		}
+		.our-clients {
+			flex-direction: column;
+
+		}
+		.our-clients-left,
+		.our-clients-right {
+			width: 100% !important;
+
+		}
+	}
 `
 export default PaboutOurClientsSection

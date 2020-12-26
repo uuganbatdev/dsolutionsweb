@@ -41,10 +41,12 @@ function Footer() {
                         <button>SUBSCRIBE</button>
                     </div>
                 </div>
-                <h3 className='half-styled'>
+				{/*
+				<h3 className='half-styled'>
                     <span></span>
                     SOCIAL POSTS
                 </h3>
+				*/}
             </div>
             <div className='bottom'>
                 © 2020 by DIVERSE SOLUTIONS.
@@ -55,10 +57,10 @@ function Footer() {
 
 const FooterStyled = styled.div`
 @media only screen and (orientation:portrait) {
-    width: 100% !important;
+    width: 95% !important;
     flex-direction: column;
     p, h3 {
-        font-size: 3vh !important;
+        font-size: 2vh !important;
     }
     .coloredbg,
     .left,
@@ -69,16 +71,28 @@ const FooterStyled = styled.div`
         justify-content: center !important;
         align-items: center !important;
     }
+	.left ,
+	.right {
+		align-items: start !important;
+		margin: 3vh 0;
+	}
     img {
         width: 6vh !important;
         height: 6vh !important;
     }
     .social-accounts {
-        margin: 2vh 0 8vh 0 !important;
-        img {
-            margin: 0 3vh !important;
-        }
+		a {
+			width: 8vh !important;
+			height: 8vh !important ;
+			img {
+				width: 3vh !important;
+				height: 3vh !important;
+			}
+		}
     }
+	.half-styled {
+		width: 5vh !important;
+	}
     .email-box-container {
         width: 90% !important;
         margin-bottom: 5vh !important;
@@ -89,7 +103,8 @@ const FooterStyled = styled.div`
     }
     .bottom {
         height: 8vh !important;
-        
+	   width: 100vw !important;
+	   left: -2.5% !important;
             font-size: 2vh !important;
         
     }

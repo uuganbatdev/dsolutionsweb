@@ -11,7 +11,7 @@ function Wave() {
 
 
 const WaveStyled = styled.div`
-    height: 100vw;
+    height: 100vh;
     width: 100vw;
     iframe {
         border: none;

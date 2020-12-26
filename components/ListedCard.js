@@ -21,7 +21,7 @@ const ListedCardStyled = styled.div`
 	border-bottom: 0.1vw solid rgba(255,255,255,0.1);
 	.num {
 		position: absolute;
-		left: -1vw;
+		right: 100%;
 		top: 22%;
 		width: 2vw;
 		height: 2vw;
@@ -40,5 +40,11 @@ const ListedCardStyled = styled.div`
 	p {
 		font-size: 0.75em !important;
 	}
+@media only screen and (orientation:portrait) {
+	.num {
+		width: 4vh;
+		height: 4vh;
+	}
+}
 `
 export default ListedCard

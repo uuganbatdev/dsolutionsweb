@@ -27,13 +27,16 @@ const BlogStyled = styled.div`
     width: 100% !important;
     margin: 5vh 0 !important;
     height: 50vh !important;
-
     img {
         opacity: 0.1 !important;
     }
     p,a,h3 {
         font-size: 3vh !important;
     }
+	a {
+		width: 8vw !important;
+		padding: 1vw !important;
+	}
     .poster {
         justify-content: space-around !important;
     }

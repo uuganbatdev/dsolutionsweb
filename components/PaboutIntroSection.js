@@ -23,7 +23,7 @@ function PaboutIntroSection() {
     return(
         <PaboutIntroSectionStyled>
             <div className='about-cover-container'>
-                <h1>About Us</h1>
+                <h1>About us</h1>
                 <img src="http://innovationplans.com/idesign/avo2/avo-dark/img/slid/1.jpg" alt="bg"/>
             </div>
             <div className='intro-container'>
@@ -51,15 +51,15 @@ const PaboutIntroSectionStyled = styled.div`
         margin-bottom: 8vw;
         }
         .about-cover-container {
-            height: 80vh;
+            height: 70vh;
             img {
                 width: 100vw;
-                height: 80vh;
+                height: 70vh;
                 object-fit: cover;
                 position: absolute;
                 top: 0;
                 left: 0;
-                opacity: 0.5;
+                opacity: 0.6;
             }
             h1 {
                 position: absolute;
@@ -67,7 +67,8 @@ const PaboutIntroSectionStyled = styled.div`
                 left:50%;
                 top: 25%;
                 transform: translate(-50%,-50%);
-                font-size: 5.5em;
+                font-size: 5em;
+				font-weight: 500;
                 font-family: 'Poppins', sans-serif;
             }
         }
@@ -85,6 +86,23 @@ const PaboutIntroSectionStyled = styled.div`
                 opacity: 0.8;
             }
         }
+	@media only screen and (orientation:portrait) {
+		.intro-container {
+			height: auto;
+			flex-direction: column;			
+			align-items: start;
+			h2 {
+				width: 100%;
+				margin-bottom: 0;
+			}
+			p {
+				width: 100%;
+			}
+		}
+		.cards-container {
+			flex-direction: column;
+		}
+	}
 `
 export default PaboutIntroSection
 

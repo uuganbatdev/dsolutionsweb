@@ -50,5 +50,13 @@ const LittlecardStyled = styled.div`
 			bottom: 0.9vw;
 		}
 	}
+	@media only screen and (orientation:portrait) {
+		width: 18vh;
+		height: 18vh;
+		img {
+			width: 4vh;
+			height: 4vh;
+		}
+	}
 `
 export default Littlecard

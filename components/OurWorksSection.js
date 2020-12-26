@@ -6,11 +6,12 @@ import {useEffect, useState} from 'react';
 SwiperCore.use([Navigation]);
 
 function OurWorkSection() {
-    const [decideSlidePV, setdecideSlidePV] = useState(0);
+    const [decideSlidePV, setdecideSlidePV] = useState(1);
     useEffect(() => {
-        if(window.innerHeight > window.innerWidth) {
-             setdecideSlidePV(1)
-        } else {setdecideSlidePV(4)};
+        if(window.innerHeight < window.innerWidth) {
+             setdecideSlidePV(4);
+			return;
+        }  
     })
     const projectsSlides = [
         {
@@ -76,7 +77,9 @@ const OurWorskSectionStyled = styled.div`
         margin: 5vh !important;
     }
     .slide {
+		height: auto !important;
         flex-basis: 100% !important;
+		font-size: 1.2em !important;
         .description {
             padding-bottom: 5vh !important;
         }
@@ -114,6 +117,7 @@ const OurWorskSectionStyled = styled.div`
             }
         }
         p {
+			margin-bottom: 0 !important;
             color: #75dab4;
         }
         .description {

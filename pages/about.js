@@ -52,6 +52,9 @@ function About() {
 }
 
 const AboutStyled = styled.div`
+	@media only screen and (orientation:portrait) {
+		width: 95%; 	
+	}
         width: 80%;
         margin: 0 auto;
         h2 {

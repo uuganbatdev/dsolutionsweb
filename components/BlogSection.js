@@ -55,7 +55,7 @@ const BlogSectionStyled = styled.div`
         flex-direction: column;
     }
     .head {
-        margin: 5vh 0 !important;
+        margin: 5vh 0 0 0 !important;
     }
 }
     width: 80%;

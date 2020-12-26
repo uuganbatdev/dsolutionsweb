@@ -99,5 +99,20 @@ const PaboutOurPurposeSectionStyled = styled.div`
 			}
 		}
 	}
+	@media only screen and (orientation:portrait) {
+		.our-purpose-left {
+			width: 75% !important;
+			position: absolute;
+			margin-right: 30vw;
+			background: #11141b;
+			img {
+				opacity: 0.2;
+			}
+		}
+		.our-purpose-right {
+			width: 100% !important;
+
+		}
+	}
 `
 export default PaboutOurPurposeSection

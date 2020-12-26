@@ -14,7 +14,7 @@ const CardStyled = styled.div`
            @media only screen and (orientation:portrait) {
                 width: 100% !important;
                 height: auto !important;
-                padding: 4vh 0 !important;
+                padding: 6vh 0 !important;
                 margin: 3vh 0!important;
                 img {
                     width: 5vh !important;
@@ -22,7 +22,7 @@ const CardStyled = styled.div`
                 }
                 p {
                     line-height: normal !important;
-                    width: 50% !important;
+                    width: 80% !important;
                 }
            } 
             background:#151921;

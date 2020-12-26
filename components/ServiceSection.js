@@ -41,8 +41,9 @@ function ServiceSection() {
 
 const ServiceSectionStyled = styled.div`
     @media only screen and (orientation:portrait) {
+	margin-top: 0 !important;
         width: 95% !important;
-        padding: 5vh 0!important;
+        padding: 0!important;
         .cards-container {
            flex-direction: column;
            width: 100% !important;  
@@ -52,9 +53,8 @@ const ServiceSectionStyled = styled.div`
             margin: 5vh auto!important;
         }
         a {
-            margin-top: 2vh !important;
-            width: 15vh !important;
-            height: 6vh !important;
+			padding: 1vw !important;
+            width: 8vh !important;
         }
     }
 
@@ -67,7 +67,7 @@ const ServiceSectionStyled = styled.div`
         margin: 0;
         font-size: 4vw;
         text-align: right;
-        text-shadow: 0 8px rgba(255, 255, 255, 0.05);
+		text-shadow:0 0.6vw rgba(255,255,255,0.05);
     }
     a {
         word-spacing: 0.3vw;

@@ -54,7 +54,7 @@ const IntroVideoSectionStyled = styled.div`
     }
     video {
         width: 100% !important;
-        height: 30vh !important;
+        height: 40vh !important;
         border-radius: 2vh !important;
     }
 }

@@ -78,5 +78,14 @@ const PaboutConnectUsSectionStyled = styled.div`
 			}
 		}
 	}
+	@media only screen and (orientation:portrait) {
+		height: auto;
+		.connect-us {
+			flex-direction: column;
+		}
+		.cs-left {
+			width: 100% !important;
+		}
+	}
 `
 export default PaboutConnectUsSection

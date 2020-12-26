@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import LittleCard from './LittleCard.js'
 
 function AboutUsSection() {
 
@@ -12,8 +13,7 @@ function AboutUsSection() {
                       Lorem ipsum dolor sit amet consectetur adipisicing
                      elit. Obcaecati perspiciatis sequi eius dicta molestiae. Animi voluptas
                       distinctio quod veritatis, vero eveniet laudantium consectetur sit expedita 
-                      iusto quaerat sapiente, perferendis adipisci.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, velit.
+                      iusto quaerat sapiente, perferendis adipisci.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, velit.
                 </p>
                 <a href="#">
                     KNOW MORE
@@ -24,15 +24,10 @@ function AboutUsSection() {
                     <img src="https://www.alliedwriters.com/wp-content/uploads/2015/09/article-writing-guide-from-laptop-862x574.jpg" alt="laptop"/>
                 </div>
                 <div className='long-card'>
-                    <div className='long-card-left'>
-                        <h3>Lorem</h3>
-                        <p>Lorem, ipsum</p>
-                    </div>
-                    <div className='long-card-right'>
-                        <h3>Lorem</h3>
-                        <p>Lorem, ipsum.</p>
-                    </div>
-                </div>
+					<LittleCard img='bolt.png' parag='DESIGN PIXEL'/>
+					<LittleCard img='bolt.png' parag='PIXEL DESIGN'/>
+					<LittleCard img='bolt.png' parag='PIXEL DESIGN'/>
+				</div>
             </div>
         </AboutUsSectionStyled>
     )
@@ -44,28 +39,32 @@ const AboutUsSectionStyled = styled.div`
     width: 95% !important;
     h2 {
         text-align: center;
+		font-size: 2em !important;
     }
     .left,
     .right {
        width: 100% !important;
     }
-    .left * {
-        width: 100% !important;
-    }
+	a {
+		padding: 1vh !important;
+		width: 8vh !important;
+	}
     .left {
+	align-items: start !important;
         p {
+			width:100% !important;
             line-height: normal !important;
         }
     }
     .right {
-        margin: 5vh 0!important;
+        margin: 5vh 0 0 0!important;
         .image-wrapper {
             img {
+				height: 70% !important;
                 border-radius: 2vh !important;
             }
         }
         .long-card {
-            flex-direction: column;
             border-radius: 2vh !important;
             left: auto !important;
             width: 90% !important;
@@ -98,8 +97,9 @@ const AboutUsSectionStyled = styled.div`
             width: 95%;
         }
         h2 {
-            font-size: 1vw !important;
-            font-weight: 200;
+            font-weight: 700;
+			text-shadow:0 0.6vw rgba(255,255,255,0.05);
+			margin-bottom: 0;
         }
         h3 {
             font-size: 1.5em;
@@ -136,25 +136,13 @@ const AboutUsSectionStyled = styled.div`
         }
         .long-card {
             position: absolute;
-            top: 70%;
+			bottom: -15%;
             left: 10%;
             display: flex;
+			justify-content: center;
             width: 95%;
-            background: #11141b;
             padding: 4vw 1vw;
             border-radius: 1vw;
-            box-shadow: 0px 0.6vw 1.2vw -0.3vw rgba(52, 60, 70, 0.1);
-            .long-card-left,
-            .long-card-right {
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                * {
-                    margin: 0;
-                }
-            }
         }
         
     }

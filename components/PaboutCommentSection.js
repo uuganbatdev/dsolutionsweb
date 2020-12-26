@@ -98,16 +98,14 @@ function PaboutCommentSection() {
 
 const PaboutCommentSectionStyled = styled.div`
 
-            height: 90vh;
             display: flex;
-            padding: 8vw 0;
+            padding: 4vw 0;
             position: relative;
-            margin-bottom: 8vw;
             .bg-image {
                 left: -10vw;
                 top: 0;
                 position: absolute;
-                height: 70vh;
+                height: 80%;
                 width: 100vw;
                 object-fit: cover;
                 opacity: 0.1;
@@ -118,7 +116,7 @@ const PaboutCommentSectionStyled = styled.div`
                 display: flex;
                 flex-direction: column;
                 h2 {    
-                        font-weight: 800;
+                       font-weight: 800;
                         margin-bottom: 15vw; 
                         font-size: 2.5em !important;
                     }
@@ -197,7 +195,6 @@ const PaboutCommentSectionStyled = styled.div`
                         }
                         .swiper-container {
                             width: 100%;
-                            height: 22vw;
                             overflow: hidden;
                             position: relative;
                             padding-bottom: 2vw;
@@ -274,5 +271,57 @@ const PaboutCommentSectionStyled = styled.div`
                         }
                     }
                 }
+	@media only screen and (orientation:portrait) {
+		flex-direction: column;
+		height: auto;	
+		hr {
+			opacity: 0.2 !important;
+			height: 0.2vh !important;
+		}
+		.bg-image {
+			left: -3vw;
+		}
+		.comment-left,
+		.comment-right {
+			width: 100%;
+		}
+		.play-button {
+			margin-left: 5vw;
+			width: 10vh !important;
+			height: 10vh !important;
+		}
+		.comment-left {	
+			h2 {
+				margin-bottom: 1vh;
+				font-size: 1.5em !important;
+			}
+			.statistics {
+				margin: 3vh 0;	
+			}
+		}
+		.comment-right {
+			height: auto;
+			.inner-right {
+				padding: 5vh 4vh;
+				width: 100%;
+				height: 70vh;
+				h3 {
+					margin-bottom: 4vh;
+				}
+				p {	
+					line-height: 1.7em;
+				}
+				img {
+					width: 10vh !important;
+					height: 10vh !important;
+				}
+				.swiper-pagination-bullet {
+					margin: 0 0.5vh !important;
+					height: 1vh !important;
+					width: 1vh !important;
+				}
+			}
+		}
+	}
 `
 export default PaboutCommentSection
