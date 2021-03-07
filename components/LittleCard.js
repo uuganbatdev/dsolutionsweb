@@ -13,8 +13,9 @@ function Littlecard({img, parag}) {
 }
 
 const LittlecardStyled = styled.div`
-	width: 11vw;
-	height: 11vw;
+	flex-shrink: 0;
+	width: 11rem;
+	height: 11rem;
 	margin: 0 0.5vw;
 	display: flex;
 	flex-direction: column;
@@ -24,30 +25,28 @@ const LittlecardStyled = styled.div`
 	border-radius: 0.3vw;
 	position: relative;
 	img {
-		width: 2vw;
-		height: 2vw;
+		width: 30%;
 		object-fit: contain;
 	}
 	p {
-		letter-spacing: 0.1vw;
+		letter-spacing: 0.1rem;
 		text-align: center;
-		margin: 1.5vw auto;
 		width: 50%;
 		font-weight: 300;
 	}
 	span {
 		border-radius: 50%;
 		position: absolute;
-		width: 0.3vw;
-		height: 0.3vw;
+		width: 5px;
+		height: 5px;
 		background: #1a1e25;
-		right: 0.5vw;
-		bottom: 0.5vw;
+		right: 0.5rem;
+		bottom: 0.5rem;
 		&:nth-of-type(2) {
-			right: 0.9vw;
+			right: 0.9rem;
 		}
 		&:nth-of-type(3) {
-			bottom: 0.9vw;
+			bottom: 0.9rem;
 		}
 	}
 	@media only screen and (orientation:portrait) {

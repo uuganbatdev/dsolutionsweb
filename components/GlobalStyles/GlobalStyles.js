@@ -32,12 +32,11 @@ const GlobalStyles = () => (
                 padding: 0;
                 background: #0c0f16;
                 color: white;
-                font-family: 'Barlow Condensed', sans-serif;
-                font-size: 1.1vw;
+                font-family: 'Poppins', sans-serif;
             }
-            p{
-                font-weight: 200;
-            }
+			p {
+				font-weight: 200;
+			}
             a {
                 color: white;
                 text-decoration: none;
@@ -45,7 +44,7 @@ const GlobalStyles = () => (
                 font-weight: 200;
             }
             h2 {
-                font-size: 5.5vw !important;
+                font-size: 5.5rem;
                 letter-spacing: 0.3vw;
             }
         `}/>

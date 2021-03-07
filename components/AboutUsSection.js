@@ -7,13 +7,18 @@ function AboutUsSection() {
 
         <AboutUsSectionStyled>
             <div className='left'>
-                <h2>ABOUT US</h2>
-                <h3>Our 20 years working experience make a different business agency services.</h3>
+				<div className='h2-container'>
+					<div className='spans'>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<h2 >ABOUT US</h2>
+				</div>
+                <h3>We are more than just a digital agency.</h3>
                 <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing
-                     elit. Obcaecati perspiciatis sequi eius dicta molestiae. Animi voluptas
-                      distinctio quod veritatis, vero eveniet laudantium consectetur sit expedita 
-                      iusto quaerat sapiente, perferendis adipisci.  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, velit.
+					We are AVO. We create award-winning websites, remarkable brands and cutting-edge apps.Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet erat. Ut dictum nisi masvitp.
+					Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit class aptent taciti sociosqu ad litora.
                 </p>
                 <a href="#">
                     KNOW MORE
@@ -84,65 +89,104 @@ const AboutUsSectionStyled = styled.div`
         }
     }
 }
-    width: 80%;
-    margin: 6vw auto;
+	max-width: 1200px;
+    margin: 0 auto;
+	padding: 100px 0;
     display:flex;
     .left {
         width: 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
-        font-size: 1.5em;
+        font-size: 1.9rem;
         p {
             width: 95%;
+			line-height: 1.8rem;
+			font-size: 1rem;
         }
-        h2 {
-            font-weight: 700;
-			text-shadow:0 0.6vw rgba(255,255,255,0.05);
-			margin-bottom: 0;
-        }
+		.h2-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+			h2 {
+				font-family: 'Barlow Condensed', sans-serif;
+				font-size: 1rem;
+				margin-bottom: 0;
+				font-weight: 300;
+				padding-left: 5px;
+			}
+			.spans {
+				position: relative;
+				width: 15px;
+				height: 100%;
+				span {
+					position: absolute;
+					border-radius: 50%;
+					display: inline-block;
+					width: 4px;
+					height: 4px;
+					background: #67c1a1;
+					left: 0rem;
+					bottom: 2px;
+					&:nth-of-type(2) {
+						left: 6px;
+					}
+					&:nth-of-type(3) {
+					left: auto;
+					right: 5px;
+						bottom: 8px;
+					}
+				}
+			}
+		}
         h3 {
-            font-size: 1.5em;
-            font-weight: 400;
-            color: #75dab4;
+		margin: 1rem 0 0.5rem 0;
+            font-size: 2.3rem;
+            font-weight: 600;
             width: 90%;
         }
         a {
-            letter-spacing: 0.1vw;
-            font-size: 0.7em;
-            display: inline-block;
-            white-space: nowrap;
-            width: 3vw;
-            flex-grow: 0;
+
+				font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 0.2rem;
+            font-size: 1rem;
+			font-weight: 200;
             padding: 0.5vw;
-            background:#1f2229;
             z-index: 2;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				background:#181b22;
+				width: 50px;
+				height: 100%;
+				z-index: -1;
+			}
         }
     }
     .right {
         width: 50%;
         display: flex;
-        flex-direction: column;
         align-items: center;
+		justify-content: center;
         position: relative;
         .image-wrapper {
-            width: 95%;
+            width: 100%;
             img {
                 width:100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 1vw;
+                border-radius: 10px;
             }
         }
         .long-card {
             position: absolute;
-			bottom: -15%;
-            left: 10%;
             display: flex;
 			justify-content: center;
-            width: 95%;
-            padding: 4vw 1vw;
-            border-radius: 1vw;
+            width: 100%;
+			top: 70%;
         }
         
     }
