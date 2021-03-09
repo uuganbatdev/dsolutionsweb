@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation} from 'swiper';
 import {useEffect, useState} from 'react';
+import SectionHeading from './SectionHeading.js';
 
 SwiperCore.use([Navigation]);
 
@@ -48,25 +49,37 @@ function OurWorkSection() {
 
     return (
         <OurWorskSectionStyled>
-            <h2>OUR WORKS.</h2>
-                <Swiper
-                    spaceBetween={0}
-                    slidesPerView={decideSlidePV}
-                    loop={true}
-                    navigation
-                >
-                {projectsSlides.map(slide => 
-                    <SwiperSlide className='slide'>                             
-                        <div className='inner-slide'>
-                            <img src={slide.imgSrc} alt={slide.imgSrc}/>
-                            <div className='description'>
-                                <p>{slide.text}</p>
-                                <h3>{slide.title}</h3>
-                            </div>
-                         </div>
-                    </SwiperSlide>
-                )}
-                </Swiper>
+			<div className='inner-container'>
+				<SectionHeading 
+					heading={'our works'}
+					headingTop={'portfolio'}
+				/>
+					<Swiper
+						spaceBetween={0}
+						slidesPerView={1}
+						loop={true}
+						navigation
+					>
+						<SwiperSlide className='slide'>                             
+							<div className='inner-slide'>
+								<img src='https://today.duke.edu/sites/default/files/styles/story_hero/public/coding_HERO.jpg?itok=F8YWeHdH' />
+								<div className='description'>
+									<p>'ART & ILLUSTRATION'</p>
+									<h3>'Innovation and Crafts'</h3>
+								</div>
+							 </div>
+						</SwiperSlide>
+						<SwiperSlide className='slide'>                             
+							<div className='inner-slide'>
+								<img src='https://today.duke.edu/sites/default/files/styles/story_hero/public/coding_HERO.jpg?itok=F8YWeHdH' />
+								<div className='description'>
+									<p>ART & ILLUSTRATION</p>
+									<h3>Innovation and Crafts</h3>
+								</div>
+							 </div>
+						</SwiperSlide>
+					</Swiper>
+			</div>
         </OurWorskSectionStyled>
     )
 }   
@@ -85,13 +98,13 @@ const OurWorskSectionStyled = styled.div`
         }
     }
 }
-    width: 100vw;
-    margin: 5vw auto;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+	.inner-container {
+		width: 1200px;
+		margin: 0 auto;
+	}
     h2 {
         margin: 0;
-        font-size: 4vw;
         text-align: center;
         text-shadow: 0 8px rgba(255, 255, 255, 0.05);
         margin-bottom: 5vw;
@@ -140,7 +153,8 @@ const OurWorskSectionStyled = styled.div`
         padding: 0;
     }
     .swiper-container {
-        width: 100%;
+        width: 1200px;
+		overflow: hidden;
         padding: 0;
         display: flex;
         justify-content: center;

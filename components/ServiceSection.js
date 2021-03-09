@@ -1,40 +1,47 @@
 import styled from '@emotion/styled'
-import Card from './Card.js'
+import CustomCard from './CustomCard.js'
+import SectionHeading from './SectionHeading.js'
 
 
 function ServiceSection() {
-        let cards = [
-            {
-                img: '/bolt.png',
-                heading : 'Digital Marketing',
-                parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
-            },
-            {
-                img: '/mobile-phone.png',
-                heading : 'Mobile Development',
-                parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
-            },
-            {
-                img: '/magic-wand.png',
-                heading : 'Fast Service',
-                parag: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ',
-            }
-        ]
+
       return (
         <ServiceSectionStyled>
-            <h2>SERVICES.</h2>
-            <div className='cards-container'>
-                {cards.map(({img,heading,parag,colored,position}) => 
-                    <Card 
-                        img={img}
-                        heading={heading}
-                        parag={parag}/>
-                    )}
-            </div>
-            <a href="#">
-                DISCOVER MORE
-            </a>
-
+			<div className='inner-container'>
+				<SectionHeading
+					heading={'services'}
+					headingTop={'best features'}
+				/>
+				<div className='cards-container'>
+					<div className='imaged-card'>
+						<div className='inner-imaged-card'>
+							<span>Best Of</span>
+							<span>Our Features</span>
+						</div>
+					</div>
+					<CustomCard
+						imgSource={'/bolt.png'}
+						firstHead={'Graphic'}
+						secondHead={'Clean Design'}
+						text={'Tempore corrupti temporibus fuga earum asperiores fugit.'}
+						bgColor={'#181b21'}
+					/>
+					<CustomCard
+						imgSource={'/bolt.png'}
+						firstHead={'Web &'}
+						secondHead={'Mobile Design'}
+						text={'Tempore corrupti temporibus fuga earum asperiores fugit.'}
+						bgColor={'#1a1e25'}
+					/>
+					<CustomCard
+						imgSource={'/bolt.png'}
+						firstHead={'Social'}
+						secondHead={'Media Marketing'}
+						text={'Tempore corrupti temporibus fuga earum asperiores fugit.'}
+						bgColor={'#20242c'}
+					/>
+				</div>
+			</div>
         </ServiceSectionStyled>
     )
 }   
@@ -57,42 +64,37 @@ const ServiceSectionStyled = styled.div`
             width: 8vh !important;
         }
     }
-
-    width: 80%;
-    margin: 10vw auto;
-    display: flex;
+    width: 100%;
     overflow-x: hidden;
-    flex-direction: column;
-    h2 {
-        margin: 0;
-        font-size: 4vw;
-        text-align: right;
-		text-shadow:0 0.6vw rgba(255,255,255,0.05);
-    }
-    a {
-        word-spacing: 0.3vw;
-        display: inline-block;
-        white-space: nowrap;
-            width: 3vw;
-            flex-grow: 0;
-            padding: 0.5vw;
-            background:#1f2229;
-            z-index: 2;
-            letter-spacing: 0.1vw;
-            font-weight: 400;
-    }
+	.inner-container {
+		width: 1200px;
+		margin: 0 auto;
+	}
     .cards-container {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-		margin: 4vw 0;
-        & > div:nth-of-type(2) {
-            margin-top: 4vw;
-        }
-        & > div:nth-of-type(3) {
-            margin-top: 8vw;
-        }
+		margin: 6% 0;
     }
+	.imaged-card {
+		width: 25%;
+		position: relative;
+		background-image: url("http://avo.smartinnovates.com/wp-content/uploads/2020/09/1-2.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		.inner-imaged-card {
+			width: 100%;
+			height: 100%;
+			padding: 30% 10%;
+			background: rgba(12, 15, 22, 0.8);
+			span {
+				display: block;
+				font-family: 'Barlow Condensed',sans-serif;
+				font-weight: 500;
+				line-height: 1.5;
+				font-size: 2rem;
+			}
+		}
+	}
 
 `
 export default ServiceSection

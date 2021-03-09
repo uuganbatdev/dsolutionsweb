@@ -14,32 +14,33 @@ function Littlecard({img, parag}) {
 
 const LittlecardStyled = styled.div`
 	flex-shrink: 0;
-	width: 11rem;
-	height: 11rem;
-	margin: 0 0.5vw;
+	width: 32%;
+	padding: 30px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background: #11141b;
-	border-radius: 0.3vw;
+	border-radius: 5px;
 	position: relative;
 	img {
-		width: 30%;
+		width: 20%;
 		object-fit: contain;
 	}
 	p {
-		letter-spacing: 0.1rem;
+		letter-spacing: 2px;
 		text-align: center;
-		width: 50%;
+		align-self: center;
+		word-spacing: 100px;
+		font-family: 'Barlow Condensed',sans-serif;
 		font-weight: 300;
 	}
 	span {
 		border-radius: 50%;
 		position: absolute;
-		width: 5px;
-		height: 5px;
-		background: #1a1e25;
+		width: 4px;
+		height: 4px;
+		background: #272930;
 		right: 0.5rem;
 		bottom: 0.5rem;
 		&:nth-of-type(2) {

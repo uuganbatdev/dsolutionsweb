@@ -40,7 +40,6 @@ export default function Home() {
       <HomeSlidingSection />
       <AboutUsSection />
       <ServiceSection />  
-      <IntroVideoSection />
       <OurWorksSection />
       <CommentSection />
       <BlogSection />
