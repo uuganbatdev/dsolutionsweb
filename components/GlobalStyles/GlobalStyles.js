@@ -43,38 +43,6 @@ const GlobalStyles = () => (
                 display: inline-block;
                 font-weight: 200;
             }
-			.home-heading-top {
-				color: #75dab4;
-				text-align: center;
-				letter-spacing: 14px;
-				font-weight: 300;
-				font-family: 'Barlow Condensed', sans-serif;
-				text-transform: uppercase;
-			}
-			.home-heading-two {
-				margin: 0;
-				margin-top: 3%;
-				text-transform: uppercase;
-				font-size: 5rem;
-				text-align: center;
-				text-shadow:0 8px rgba(255, 255, 255, 0.05);
-				font-weight: 700;
-				font-family: 'Barlow Condensed', sans-serif;
-			}
-			.bg-heading-stroke {
-				display: block;
-				-webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-				color: transparent;
-				font-size: 10rem;
-				font-weight: 700;
-				width: 100%;
-				top: -35px;
-				position: absolute;
-				text-align:center;
-				opacity: 0.3;
-				letter-spacing: 3px;
-				font-family: 'Barlow Condensed', sans-serif;
-			}
 			.home-anchor {
 				font-family: 'Barlow Condensed', sans-serif;
 				letter-spacing: 0.2rem;
@@ -94,10 +62,6 @@ const GlobalStyles = () => (
 					z-index: -1;
 				}
 			}
-            h2 {
-                font-size: 5.5rem;
-                letter-spacing: 0.3vw;
-            }
         `}/>
     </>
 )

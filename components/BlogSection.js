@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import Blog from './Blog'
+import SectionHeading from './SectionHeading.js';
 
 function BlogSection() {
 
@@ -28,10 +29,10 @@ function BlogSection() {
     ]
     return (
         <BlogSectionStyled>
-                <div className='head'>
-                    <p>LATEST NEWS</p>
-                    <h2>OUR BLOGS.</h2>
-                </div>
+			<SectionHeading 
+				heading={'our blogs'}
+				headingTop={'latest news'}
+			/>
                 <div className='blogs-container'>
                     {lastBlogs.map(blog => 
                         <Blog

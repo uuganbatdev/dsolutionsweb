@@ -73,7 +73,6 @@ const ServiceSectionStyled = styled.div`
     .cards-container {
         width: 100%;
         display: flex;
-		margin: 6% 0;
     }
 	.imaged-card {
 		width: 25%;

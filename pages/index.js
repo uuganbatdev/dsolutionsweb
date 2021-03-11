@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import HomeSlidingSection from '../components/HomeSlidingSection.js'
-import AboutUsSection from '../components/AboutUsSection.js'
-import ServiceSection from '../components/ServiceSection.js'
-import IntroVideoSection from '../components/IntroVideoSection.js'
-import OurWorksSection from '../components/OurWorksSection.js'
-import CommentSection from '../components/CommentSection.js'
-import BlogSection from '../components/BlogSection.js'
+import HomeSlidingSection from '../components/HomeSlidingSection'
+import AboutUsSection from '../components/AboutUsSection'
+import ServiceSection from '../components/ServiceSection'
+//import IntroVideoSection from '../components/IntroVideoSection.js'
+import OurWorksSection from '../components/OurWorksSection'
+import CommentSection from '../components/CommentSection'
+import BlogSection from '../components/BlogSection'
+import PaboutCommentSection from '../components/PaboutCommentSection'
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
       <AboutUsSection />
       <ServiceSection />  
       <OurWorksSection />
-      <CommentSection />
+		<PaboutCommentSection />
       <BlogSection />
       <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/plugins0a05.js?ver=20170620'></script>
   	  <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/main0a05.js?ver=20170620'></script>
