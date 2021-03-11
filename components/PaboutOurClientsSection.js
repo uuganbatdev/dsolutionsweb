@@ -52,7 +52,7 @@ const PaboutOurClientsSectionStyled = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 100px 0;
+	margin-top: 100px;
 	.our-clients {
 		width: 1200px;
 		position: relative;

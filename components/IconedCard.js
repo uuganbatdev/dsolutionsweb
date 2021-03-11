@@ -18,7 +18,7 @@ const IconedCardStyled = styled.div`
 	img {
 		height: 45px;
 		object-fit: contain;
-		filter: invert(99%) sepia(98%) saturate(0%) hue-rotate(297deg) brightness(105%) contrast(100%);
+		filter: brightness(205%);
 	}
 	@media only screen and (orientation:portrait) {
 		width: 40vw;
