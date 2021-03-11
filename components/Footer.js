@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 
 function Footer() {
-
       return (
 
         <FooterStyled>
@@ -49,7 +48,7 @@ function Footer() {
 				*/}
             </div>
             <div className='bottom'>
-                © 2020 by DIVERSE SOLUTIONS.
+                © {new Date().getFullYear()} by DIVERSE SOLUTIONS.
             </div>
         </FooterStyled>
     )
@@ -109,7 +108,8 @@ const FooterStyled = styled.div`
         
     }
 }
-    width: 80%;
+font-family: 'Barlow Condensed',sans-serif;
+    width: 1200px;
     margin: 0 auto;
     padding-top: 8vw ;
     padding-bottom: 8vw ;
@@ -129,7 +129,7 @@ const FooterStyled = styled.div`
     .left {
         
         h3 {
-            margin: 2vw 0;
+            margin: 30px 0;
         }
         width: 50%;
         height: 15vw;
@@ -138,8 +138,8 @@ const FooterStyled = styled.div`
         flex-direction: column;
         justify-content: space-around;
         img {
-            width: 3vw;
-            height: 3vw;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
             margin-bottom: 1vw;
         }
@@ -153,8 +153,8 @@ const FooterStyled = styled.div`
             display: flex;
             justify-content: left;
 			a {
-				width: 3vw;
-				height: 3vw;
+				width: 50px;
+				height: 50px;
 				position: relative;
 				margin: 0 1vw;
 				&::after {
@@ -174,8 +174,8 @@ const FooterStyled = styled.div`
 				left: 50%;
 				transform: translate(-50%,-50%);
 				z-index: 2;
-				width: 1vw;
-				height: 1vw;
+				width: 15px;
+				height: 15px;
                 object-fit: contain;
             }
         }
@@ -189,7 +189,7 @@ const FooterStyled = styled.div`
             margin: 0;
         }
         .email-box-container {
-            margin: 1.5vw 0 3vw 0;
+            margin: 15px 0 15px 0;
             p {
             }
             .inner-box {
@@ -202,12 +202,12 @@ const FooterStyled = styled.div`
                     background: #14171e;
                     color: white;
                     width: 70%;
-                    font-size: 1vw;
+                    font-size: 1rem;
                 }
                 button {
                     font-size: 1vw;
                     width: 30%;
-                    padding: 0.7vw;
+                    padding: 5px;
                     background: #16191f;
                     color: #75dab4;
                 }
@@ -224,7 +224,7 @@ const FooterStyled = styled.div`
             font-size: 0.7em;
             display: inline-block;
             white-space: nowrap;
-            width: 2vw;
+            width: 10px;
             flex-grow: 0;
             padding: 0.5vw;
             background:#1f2229;
