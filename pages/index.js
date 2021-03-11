@@ -7,6 +7,7 @@ import OurWorksSection from '../components/OurWorksSection'
 import CommentSection from '../components/CommentSection'
 import BlogSection from '../components/BlogSection'
 import PaboutCommentSection from '../components/PaboutCommentSection'
+import PaboutOurClientsSection from '../components/PaboutOurClientsSection'
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <ServiceSection />  
       <OurWorksSection />
 		<PaboutCommentSection />
+		<PaboutOurClientsSection />
       <BlogSection />
       <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/plugins0a05.js?ver=20170620'></script>
   	  <script type='text/javascript' src='../wp-content/themes/gravity_demo/assets/js/main0a05.js?ver=20170620'></script>

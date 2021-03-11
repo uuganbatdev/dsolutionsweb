@@ -31,7 +31,6 @@ function PaboutOurClientsSection() {
 
 	return(
 		<PaboutOurClientsSectionStyled>
-			<div className='bg'></div>
             <div className='our-clients'>
                 <div className='our-clients-left'>
                      <p>CLIENTS</p>
@@ -49,51 +48,44 @@ function PaboutOurClientsSection() {
 
 const PaboutOurClientsSectionStyled = styled.div`
 	width: 100%;
-	height: 80vh;
 	position: relative;
-	top: -1.1vw;
 	display: flex;
 	align-items: center;
-	.bg {
-		position: absolute;	
-		width: 100vw;
-		top: 0;
-		height: 80vh;
-		left: -10vw;
-		background: #11141b;
-	}
+	justify-content: center;
+	padding: 100px 0;
 	.our-clients {
-		width: 100%;
+		width: 1200px;
 		position: relative;
 		height: 70%;
 		display: flex;
 		justify-content: right;
 		.our-clients-left {
-			width: 30%;
-			height: 100%;
+			width: 35%;
 			display: flex;
 			flex-direction: column;
 			align-items: left;
 			justify-content: center;
+				font-family: 'Barlow Condensed', sans-serif;
 			p {
 				color: #75dab4;
-				letter-spacing: 0.8vw;
-				font-weight: 400;
+				font-weight: 300;
+				font-size: 17px;
+				text-transform: uppercase;
+				letter-spacing: 14px;
 			}
 			h2 {
-				font-family: 'Barlow Condensed', sans-serif;
-				text-shadow: 0 0.5vw rgba(255, 255, 255, 0.05);
-				margin-top: 1vw;
-				font-size: 5em !important;
+				text-shadow: 0 8px rgba(255,255,255,.05);
+				margin-top: 0;
+				font-size: 5rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 4px;
 			}
 		}
 		.our-clients-right {
-			width: 64%;
-			height: 100%;
+			width: 65%;
 			display: flex;
 			flex-wrap: wrap;
-			align-items: center;
-			align-content: center;
 			justify-content: center;
 		}	
 	}
