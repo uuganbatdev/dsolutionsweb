@@ -38,5 +38,12 @@ const CustomCardStyled = styled.div`
 	p {
 		width: 80%;
 	}
+	@media only screen and (orientation:portrait) {
+		width: 100%;
+		padding: 15% 0;
+		img {
+			height: 50px;
+		}
+	}
 `
 export default CustomCard

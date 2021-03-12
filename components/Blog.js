@@ -30,6 +30,9 @@ const BlogStyled = styled.div`
     img {
         opacity: 0.1 !important;
     }
+	.inner-blog {
+		padding: 60px 20px !important;
+	}
     p,a,h3 {
         font-size: 3vh !important;
     }

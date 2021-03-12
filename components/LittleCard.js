@@ -51,11 +51,15 @@ const LittlecardStyled = styled.div`
 		}
 	}
 	@media only screen and (orientation:portrait) {
-		width: 18vh;
-		height: 18vh;
+		width: 100%;
+		padding: 40px 0;
+		margin: 10px 0;
 		img {
 			width: 4vh;
 			height: 4vh;
+		}
+		p {
+			word-spacing: 100vw;
 		}
 	}
 `

@@ -46,5 +46,13 @@ const SectionHeadingStyled = styled.div`
 			letter-spacing: 3px;
 			font-family: 'Barlow Condensed', sans-serif;
 		}
+
+@media only screen and (orientation:portrait) {
+	width: 100vw;
+	.bg-heading-stroke {
+		font-size: 6rem !important;
+	}
+
+}
 `
 export default SectionHeading

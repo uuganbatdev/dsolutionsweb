@@ -52,6 +52,7 @@ function BlogSection() {
 const BlogSectionStyled = styled.div`
 @media only screen and (orientation:portrait) {
     width: 90% !important;
+	align-items: center;
     .blogs-container {
         flex-direction: column;
     }

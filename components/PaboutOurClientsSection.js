@@ -97,6 +97,8 @@ const PaboutOurClientsSectionStyled = styled.div`
 		}	
 		h2 {
 			margin-bottom: 1vh;
+			word-spacing: 100vw;
+			font-size: 3rem !important;
 		}
 		.our-clients {
 			flex-direction: column;
@@ -106,6 +108,9 @@ const PaboutOurClientsSectionStyled = styled.div`
 		.our-clients-right {
 			width: 100% !important;
 
+		}
+		.our-clients-left {
+			margin-left: 5%;
 		}
 	}
 `

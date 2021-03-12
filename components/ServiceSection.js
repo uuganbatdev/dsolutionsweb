@@ -47,23 +47,9 @@ function ServiceSection() {
 }   
 
 const ServiceSectionStyled = styled.div`
-    @media only screen and (orientation:portrait) {
-	margin-top: 0 !important;
-        width: 95% !important;
-        padding: 0!important;
-        .cards-container {
-           flex-direction: column;
-           width: 100% !important;  
-        }
-        h2 {
-
-            margin: 5vh auto!important;
-        }
-        a {
-			padding: 1vw !important;
-            width: 8vh !important;
-        }
-    }
+	.image-card {
+		width: 100%;
+	}
     width: 100%;
     overflow-x: hidden;
 	.inner-container {
@@ -95,5 +81,34 @@ const ServiceSectionStyled = styled.div`
 		}
 	}
 
+    @media only screen and (orientation:portrait) {
+		margin-top: 0 !important;
+        width: 95% !important;
+		margin: 0 auto;
+        padding: 0!important;
+		.inner-container {
+			width: 100vw;
+		}
+		.imaged-card {
+			width: 100%;
+			.inner-imaged-card {
+				padding: 35% 15%;
+			}
+		}
+        .cards-container {
+           flex-direction: column;
+		   align-items: center;
+		   justify-content: center;
+           width: 100% !important;  
+        }
+        h2 {
+
+            margin: 5vh auto!important;
+        }
+        a {
+			padding: 1vw !important;
+            width: 8vh !important;
+        }
+    }
 `
 export default ServiceSection

@@ -308,7 +308,6 @@ const PaboutCommentSectionStyled = styled.div`
 			height: 0.2vh !important;
 		}
 		.bg-image {
-			left: -3vw;
 		}
 		.comment-left,
 		.comment-right {
@@ -319,9 +318,15 @@ const PaboutCommentSectionStyled = styled.div`
 			width: 10vh !important;
 			height: 10vh !important;
 		}
+		.inner-container {
+			flex-direction: column;
+			width: 100%;
+		}
 		.comment-left {	
 			h2 {
 				margin-bottom: 1vh;
+				width: 80%;
+				margin: 20px 0 20px 20px;
 				font-size: 1.5em !important;
 			}
 			.statistics {

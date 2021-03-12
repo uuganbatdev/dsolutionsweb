@@ -40,28 +40,6 @@ function AboutUsSection() {
 }   
 
 const AboutUsSectionStyled = styled.div`
-@media only screen and (orientation:portrait) {
-    flex-direction: column;
-    width: 95% !important;
-    h2 {
-        text-align: center;
-		font-size: 2em !important;
-    }
-    .left,
-    .right {
-       width: 100% !important;
-    }
-	a {
-		padding: 1vh !important;
-		width: 8vh !important;
-	}
-    .left {
-	align-items: start !important;
-        p {
-			width:100% !important;
-            line-height: normal !important;
-        }
-    }
     .right {
         margin: 5vh 0 0 0!important;
         .image-wrapper {
@@ -190,5 +168,44 @@ const AboutUsSectionStyled = styled.div`
 			line-height: 1.5;
         }
     }
+@media only screen and (orientation:portrait) {
+    flex-direction: column;
+    width: 95% !important;
+	padding: 50px 0;
+    h2 {
+        text-align: center;
+		font-size: 1rem !important;
+    }
+	.spans {
+		display: none;
+	}
+    .left,
+    .right {
+       width: 100% !important;
+    }
+	a {
+		padding: 1vh !important;
+		width: 8vh !important;
+	}
+	.left {
+		flex-direction: column;
+		.image-wrapper-left, .image-wrapper-right {
+			width: 100% !important;
+			justify-content: center;
+			align-items: center;
+		}
+		.image-wrapper-left {
+		}
+		img {
+			width: 90% !important;
+			height: 150px !important;
+			margin: 10px 0 !important;
+		}
+	}
+	.long-card {
+		flex-direction: column;
+		margin: 0 auto;
+	}
+}
 `
 export default AboutUsSection

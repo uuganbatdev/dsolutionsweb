@@ -21,13 +21,13 @@ const IconedCardStyled = styled.div`
 		filter: brightness(205%);
 	}
 	@media only screen and (orientation:portrait) {
-		width: 40vw;
+		width: 90%;
 		height: 40vw;
 		margin: 1.5vh;
 		border-radius: 1vh;
+		padding: 0;
 		img {
 			width: 10vh;
-			height: 10vh;
 		}
 	}
 

@@ -7,14 +7,14 @@ import SectionHeading from './SectionHeading.js';
 SwiperCore.use([Navigation]);
 
 function OurWorkSection() {
-    const [decideSlidePV, setdecideSlidePV] = useState(1);
+    const [decideSlidePV, setdecideSlidePV] = useState(3);
 
     useEffect(() => {
-        if(window.innerHeight < window.innerWidth) {
-             setdecideSlidePV(4);
+        if(window.innerHeight > window.innerWidth) {
+             setdecideSlidePV(1);
 			return;
         }  
-    })
+    },[])
 
 	let descOpacity = () => {
 		let descs = document.querySelectorAll('.description');
@@ -37,7 +37,7 @@ function OurWorkSection() {
 				/>
 					<Swiper
 						spaceBetween={30}
-						slidesPerView={3}
+						slidesPerView={decideSlidePV}
 						loop={true}
 						speed={1000}
 						onSlideChange={descOpacity}
@@ -79,19 +79,6 @@ function OurWorkSection() {
 }   
 
 const OurWorskSectionStyled = styled.div`
-@media only screen and (orientation:portrait) {
-    h2 {
-        margin: 5vh !important;
-    }
-    .slide {
-		height: auto !important;
-        flex-basis: 100% !important;
-		font-size: 1.2em !important;
-        .description {
-            padding-bottom: 5vh !important;
-        }
-    }
-}
     width: 100%;
 	margin-bottom: 100px;
 	.inner-container {
@@ -256,5 +243,33 @@ const OurWorskSectionStyled = styled.div`
         }
     }
 
+@media only screen and (orientation:portrait) {
+    h2 {
+        margin: 5vh !important;
+    }
+	width: 100vw;
+	.inner-container {
+		width: 100% !important;
+	}
+	.swiper-container {
+		transform: translateX(0);
+		width: 100%;
+		&: before {
+			display: none;
+		}
+		&: after {
+			display: none;
+		}
+	}
+	.swiper-button-prev {
+		 left: 0;
+	}
+	.swiper-button-next {
+		 right: 0;
+	}
+	.container-start, .container-end {
+		display: none;
+	}
+}
 `
 export default OurWorkSection
