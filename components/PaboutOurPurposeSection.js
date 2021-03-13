@@ -46,7 +46,7 @@ function PaboutOurPurposeSection() {
 }
 
 const PaboutOurPurposeSectionStyled = styled.div`
-  height: 100%;
+  height: 100vh;
   margin: auto;
   width: 100%;
   position: relative;

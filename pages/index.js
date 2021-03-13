@@ -1,12 +1,13 @@
 import Head from "next/head";
-import HomeSlidingSection from "../components/HomeSlidingSection.js";
-import AboutUsSection from "../components/AboutUsSection.js";
-import ServiceSection from "../components/ServiceSection.js";
-import IntroVideoSection from "../components/IntroVideoSection.js";
-import OurWorksSection from "../components/OurWorksSection.js";
-import CommentSection from "../components/CommentSection.js";
-import BlogSection from "../components/BlogSection.js";
-import TextAni from "../components/textAnimate";
+import HomeSlidingSection from "../components/HomeSlidingSection";
+import AboutUsSection from "../components/AboutUsSection";
+import ServiceSection from "../components/ServiceSection";
+//import IntroVideoSection from '../components/IntroVideoSection.js'
+import OurWorksSection from "../components/OurWorksSection";
+import CommentSection from "../components/CommentSection";
+import BlogSection from "../components/BlogSection";
+import PaboutCommentSection from "../components/PaboutCommentSection";
+import PaboutOurClientsSection from "../components/PaboutOurClientsSection";
 
 export default function Home() {
   return (
@@ -41,9 +42,9 @@ export default function Home() {
       <HomeSlidingSection />
       <AboutUsSection />
       <ServiceSection />
-      <IntroVideoSection />
       <OurWorksSection />
-      <CommentSection />
+      <PaboutCommentSection />
+      <PaboutOurClientsSection />
       <BlogSection />
       <script
         type="text/javascript"

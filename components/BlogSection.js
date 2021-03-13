@@ -1,26 +1,27 @@
 import styled from '@emotion/styled'
 import Blog from './Blog'
+import SectionHeading from './SectionHeading.js';
 
 function BlogSection() {
 
     const lastBlogs = [
         {
             date: ['06', 'AUG 2019'],
-            poster: 'admin',
+            poster: 'Andres Alfaro',
             usedTech: 'nextjs',
             bgImg: 'https://miro.medium.com/max/10944/0*noEsnJ8kRsectnQg',
             title: 'The Start-Up Ultimate Guide to Make your WordPress Journal'   
         },
         {
             date: ['06', 'AUG 2019'],
-            poster: 'admin',
+            poster: 'Andres Alfaro',
             usedTech: 'nextjs',
             bgImg: 'https://i.ytimg.com/vi/hJiEoOvvIlk/maxresdefault.jpg',
             title: 'The Start-Up Ultimate -Up Ultimate Guide to Make your WordPress Journ'   
         },
         {
             date: ['06', 'AUG 2019'],
-            poster: 'admina',
+            poster: 'Andres Alfaro',
             usedTech: 'nextjs',
             bgImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTNOF-V23beuuSnDYMRN0oIOaQcF8LSaWjimQ&usqp=CAU',
             title: 'The Start-Up Ultimate Guide to Make your WordPress Journal'   
@@ -28,10 +29,10 @@ function BlogSection() {
     ]
     return (
         <BlogSectionStyled>
-                <div className='head'>
-                    <p>LATEST NEWS</p>
-                    <h2>OUR BLOGS.</h2>
-                </div>
+			<SectionHeading 
+				heading={'our blog'}
+				headingTop={'latest news'}
+			/>
                 <div className='blogs-container'>
                     {lastBlogs.map(blog => 
                         <Blog
@@ -51,6 +52,7 @@ function BlogSection() {
 const BlogSectionStyled = styled.div`
 @media only screen and (orientation:portrait) {
     width: 90% !important;
+	align-items: center;
     .blogs-container {
         flex-direction: column;
     }
@@ -58,28 +60,15 @@ const BlogSectionStyled = styled.div`
         margin: 5vh 0 0 0 !important;
     }
 }
-    width: 80%;
-    margin: 5vw auto;
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    .head {
-        p {
-            color: #75dab4;
-            text-align: center;
-            letter-spacing: 0.5vw;
-        }
-        h2 {
-            margin: 0;
-            font-size: 4vw;
-            text-align: center;
-            text-shadow: 0 8px rgba(255, 255, 255, 0.05);
-            margin-bottom: 5vw;
-        }
-    }
     .blogs-container {
         width: 100%;
         display: flex;
         justify-content: space-between;
+		margin-bottom: 100px;
     }
 
 `

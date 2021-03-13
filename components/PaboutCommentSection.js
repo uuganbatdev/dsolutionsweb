@@ -10,7 +10,7 @@ function PaboutCommentSection() {
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       name: "Alex Regelman",
       text:
-        "Lorem ipsum dolaperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
+        "Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit  class aptent taciti sociosqu ad litora.",
       info: "Co-founder, Colabrio",
     },
     {
@@ -18,7 +18,7 @@ function PaboutCommentSection() {
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       name: "Alex Regelman",
       text:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum aperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
+        "Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit  class aptent taciti sociosqu ad litora.",
       info: "Co-founder, Colabrio",
     },
     {
@@ -26,7 +26,7 @@ function PaboutCommentSection() {
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       name: "Alex Regelman",
       text:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum aperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
+        "Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit  class aptent taciti sociosqu ad litora.",
       info: "Co-founder, Colabrio",
     },
     {
@@ -34,7 +34,7 @@ function PaboutCommentSection() {
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       name: "Alex Regelman",
       text:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum aperiam inventore, accusamus harum dolore labore asperiores, quisquam autem deserunt accusantium praesentium laboriosam rem. Asperiores natus non quia suscipit accusantium!",
+        "Nulla metus metus ullamcorper vel tincidunt sed euismod nibh volutpat velit  class aptent taciti sociosqu ad litora.",
       info: "Co-founder, Colabrio",
     },
   ];
@@ -61,7 +61,7 @@ function PaboutCommentSection() {
         alt="bgiamge"
         className="bg-image"
       />
-      <div className="comments">
+      <div className="inner-container">
         <div className="comment-left">
           <div className="play-button">
             <img src="play-btn.png" alt="playbtn" />
@@ -78,6 +78,7 @@ function PaboutCommentSection() {
               loop={true}
               autoplay={true}
               pagination={{ clickable: true }}
+              speed={1000}
             >
               {commentData.map((slide) => (
                 <SwiperSlide className="slide">
@@ -136,30 +137,38 @@ const PaboutCommentSectionStyled = styled.div`
     text-align: start;
   }
 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .inner-container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+  }
   .bg-image {
     top: 0;
     position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 55%;
+    height: 550px;
+    width: 100vw;
     object-fit: cover;
     opacity: 0.3;
   }
   .comment-left {
+    z-index: 10;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    width: 60vw;
     h2 {
-      width: 80%;
-      font-weight: 800;
-      font-size: 2.5rem !important;
-      letter-spacing: 2px;
+      color: #fff;
+      font-family: "Poppins", Sans-serif;
+      font-size: 45px;
+      font-weight: 700;
     }
     .play-button {
-      display: block;
-      width: 5rem;
-      height: 5rem;
-      margin-bottom: 50px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
       position: relative;
       z-index: 3;
       cursor: pointer;
@@ -192,37 +201,50 @@ const PaboutCommentSectionStyled = styled.div`
         background: #83debc;
       }
     }
+    .statistics {
+      display: flex;
+      justify-content: center;
+      .inner-statistics {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          margin: 0;
+        }
+      }
+    }
   }
-
   .comment-right {
-    position: relative;
-    top: -4rem;
     z-index: 10;
-    width: 40vw;
-    height: 40rem;
-    align-items: center;
-    justify-content: center;
+    width: 40%;
+    height: 100%;
+    display: flex;
     .inner-right {
-      padding: 2%;
-      width: 30rem;
-      height: 55vh;
+      padding: 70px 40px;
+      width: 100%;
       background: #75dab4;
       color: black;
-      margin: auto;
       font-family: "Poppins", sans-serif;
       .card-title {
-        font-size: 0.75em;
-        letter-spacing: 0.3rem;
+        color: #0c0f16;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 4px;
       }
       .card-header {
-        margin: 0;
-        font-size: 2rem;
+        color: #0c0f16;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.4rem;
       }
       .swiper-container {
         width: 100%;
         overflow: hidden;
         position: relative;
-        padding-bottom: 2rem;
+        padding-bottom: 2vw;
         .swiper-wrapper {
           width: 100%;
           height: 100%;
@@ -237,9 +259,13 @@ const PaboutCommentSectionStyled = styled.div`
             flex-direction: column;
             justify-content: space-between;
             .text {
-              font-family: "Poppins", sans-serif;
+              color: #333;
+              font-size: 17px;
+              margin: 0;
+              margin-bottom: 0px;
+              padding-bottom: 30px;
               font-weight: 300;
-              opacity: 0.8;
+              line-height: 2;
             }
             hr {
               opacity: 0.1;
@@ -254,15 +280,33 @@ const PaboutCommentSectionStyled = styled.div`
               justify-content: left;
               align-items: center;
               img {
-                width: 15%;
-                object-fit: contain;
-                border-radius: 90%;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
                 object-fit: cover;
               }
+              h3 {
+                font-weight: 500;
+                color: #0c0f16;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-family: "Barlow Condensed", sans-serif;
+              }
               .swiper-bottom-right {
-                margin-left: 5%;
-                * {
-                  margin: 0;
+                display: flex;
+                margin-left: 20px;
+                flex-direction: column;
+                justify-content: center;
+                h3 {
+                  margin-bottom: 10px;
+                }
+                p {
+                  margin-top: 0;
+                  color: #0c0f16;
+                  font-size: 13px;
+                  font-weight: 300;
+                  text-transform: uppercase;
                 }
               }
             }
@@ -274,28 +318,28 @@ const PaboutCommentSectionStyled = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
-          bottom: 10px;
+          bottom: 0;
           right: 0;
           .swiper-pagination-bullet {
-            width: 1rem;
-            height: 1rem;
+            width: 0.5vw;
+            height: 0.5vw;
             border: 0.1vw solid black;
             border-radius: 50%;
-            margin: 0 2%;
+            margin: 0 0.2vw;
             opacity: 0.5;
             transition: 0.3s;
             cursor: pointer;
           }
           .swiper-pagination-bullet-active {
             transition: 0.3s;
-            background: black;
+            background: white;
             opacity: 1 !important;
           }
         }
       }
     }
   }
-  @media (max-width: 768px) {
+  @media only screen and (orientation: portrait) {
     flex-direction: column;
     height: auto;
     hr {
@@ -303,7 +347,6 @@ const PaboutCommentSectionStyled = styled.div`
       height: 0.2vh !important;
     }
     .bg-image {
-      left: -3vw;
     }
     .comment-left,
     .comment-right {
@@ -314,9 +357,15 @@ const PaboutCommentSectionStyled = styled.div`
       width: 10vh !important;
       height: 10vh !important;
     }
+    .inner-container {
+      flex-direction: column;
+      width: 100%;
+    }
     .comment-left {
       h2 {
         margin-bottom: 1vh;
+        width: 80%;
+        margin: 20px 0 20px 20px;
         font-size: 1.5em !important;
       }
       .statistics {
@@ -325,7 +374,6 @@ const PaboutCommentSectionStyled = styled.div`
     }
     .comment-right {
       height: auto;
-      width: 500px;
       .inner-right {
         padding: 5vh 4vh;
         width: 100%;

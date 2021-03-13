@@ -3,60 +3,57 @@ import styled from "@emotion/styled";
 function Footer() {
   return (
     <FooterStyled>
-      <div className="tops">
-        <span className="coloredbg"></span>
-        <div className="left">
-          <img src="bolt.png" alt="logo" />
-          <div className="company-location">
-            <p>
-              <span>Email:</span>diverseSolution@diversolutions.com
-            </p>
-            <p>
-              <span>Address:</span>BGD, 3khoroo, 71-81
-            </p>
-            <p>
-              <span>Phone:</span>+976 95941551
-            </p>
-          </div>
-          <h3 className="half-styled">
-            <span>FOLLOW</span> US
-          </h3>
-          <div className="social-accounts">
-            <a href="#">
-              <img src="facebook.png" alt="facebook" />
-            </a>
-            <a href="#">
-              <img src="instagram.png" alt="instagram" />
-            </a>
-            <a href="#">
-              <img src="linkedin.png" alt="twitter" />
-            </a>
+      <span className="coloredbg"></span>
+      <div className="left">
+        <img src="bolt.png" alt="" />
+        <div className="company-location">
+          <p>
+            <span>Email:</span>diverseSolution@diversolutions.com
+          </p>
+          <p>
+            <span>Address:</span>BGD, 3khoroo, 71-81
+          </p>
+          <p>
+            <span>Phone:</span>+976 95941551
+          </p>
+        </div>
+        <h3 className="half-styled">
+          <span></span>
+          FOLLOW US
+        </h3>
+        <div className="social-accounts">
+          <a href="#">
+            <img src="facebook.png" alt="facebook" />
+          </a>
+          <a href="#">
+            <img src="instagram.png" alt="instagram" />
+          </a>
+          <a href="#">
+            <img src="linkedin.png" alt="twitter" />
+          </a>
+        </div>
+      </div>
+      <div className="right">
+        <h3 className="half-styled">
+          <span></span>
+          NEWS LATTER
+        </h3>
+        <div className="email-box-container">
+          <p>Sign up for subscribe out newsletter!</p>
+          <div className="inner-box">
+            <input type="email" placeholder="Your Email" />
+            <button>SUBSCRIBE</button>
           </div>
         </div>
-        <div className="rightBack">
-          <div className="right">
-            <h3 className="half-styled">
-              <span>NEWS</span>
-              LETTER
-            </h3>
-            <div className="email-box-container">
-              <p>Sign up for subscribe out newsletter!</p>
-              <div className="inner-box">
-                <input type="email" placeholder="Your Email address" />
-                <button>SUBSCRIBE</button>
-              </div>
-            </div>
-            {/*
+        {/*
 				<h3 className='half-styled'>
                     <span></span>
                     SOCIAL POSTS
                 </h3>
 				*/}
-          </div>
-        </div>
       </div>
-      <div className="bottomFooter">
-        © 2021, Avo WordPress Theme. Made with passion by ThemesCamp
+      <div className="bottom">
+        © {new Date().getFullYear()} by DIVERSE SOLUTIONS.
       </div>
     </FooterStyled>
   );
@@ -117,26 +114,15 @@ const FooterStyled = styled.div`
       font-size: 2vh !important;
     }
   }
-  width: 100vw;
-  height: 37rem;
+  font-family: "Barlow Condensed", sans-serif;
+  width: 1200px;
   margin: 0 auto;
-  padding: 7rem 0px 8rem 0px;
-  display: block;
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
-
-  .tops {
-    display: flex;
-    width: 100vw;
-  }
-
-  p {
-    font-size: 16px;
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 1px;
-  }
-
   .coloredbg {
     z-index: 1;
     position: absolute;
@@ -148,19 +134,17 @@ const FooterStyled = styled.div`
   }
   .left {
     h3 {
-      margin: 2vw 0;
-      font-size: 13px;
-      font-family: "Barlow Condensed", sans-serif;
+      margin: 30px 0;
     }
-    padding: 0px 6rem;
-    width: 50vw;
+    width: 50%;
+    height: 15vw;
     z-index: 3;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    justify-content: space-around;
     img {
-      width: 3rem;
-      height: 3rem;
+      width: 50px;
+      height: 50px;
       object-fit: contain;
       margin-bottom: 1vw;
     }
@@ -172,28 +156,12 @@ const FooterStyled = styled.div`
     }
     .social-accounts {
       display: flex;
-      img {
-        position: absolute;
-        top: -6px;
-        left: -5px;
-        width: 1rem;
-        height: 1rem;
-        margin: 1rem;
-      }
+      justify-content: left;
       a {
+        width: 50px;
+        height: 50px;
         position: relative;
-        width: 2.5rem;
-        height: 2.5rem;
-        border: 1px solid rgba(255, 255, 255, 0.01);
-        border-radius: 90%;
-        background: rgba(255, 255, 255, 0.01);
-        margin: 15px;
-      }
-      .al {
-        width: 3rem;
-        height: 3rem;
-        position: relative;
-        margin: 0 1rem;
+        margin: 0 1vw;
         &::after {
           content: "";
           position: absolute;
@@ -205,42 +173,29 @@ const FooterStyled = styled.div`
           border-radius: 50%;
         }
       }
-      .jimg {
+      img {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
-        width: 1rem;
-        height: 1rem;
+        width: 15px;
+        height: 15px;
         object-fit: contain;
       }
     }
   }
-
-  .rightBack {
-    width: 50vw;
-    background-image: url('url("http://avo.smartinnovates.com/demo13/wp-content/uploads/sites/15/2020/10/pattern.png")');
-  }
-
   .right {
-    width: 34rem;
-    height: 20rem;
+    width: 40%;
+    height: 20vw;
     display: flex;
     flex-direction: column;
-    margin: auto;
     h3 {
       margin: 0;
-      font-size: 13px;
-      font-family: "Barlow Condensed", sans-serif;
     }
     .email-box-container {
-      margin: 1.5rem 0 3rem 0;
+      margin: 15px 0 15px 0;
       p {
-        font-size: 12px;
-        font-family: "Poppins", sans-serif;
-        opacity: 0.9;
-        margin-left: 10px;
       }
       .inner-box {
         display: flex;
@@ -248,18 +203,16 @@ const FooterStyled = styled.div`
           border: none;
         }
         input {
-          padding: 1rem;
+          padding: 1vw;
           background: #14171e;
           color: white;
           width: 70%;
-          font-size: 13px;
-          font-family: "Poppins", sans-serif;
+          font-size: 1rem;
         }
         button {
-          font-size: 12px;
-          font-family: "Poppins", sans-serif;
-          width: 8rem;
-          padding: 0.7rem;
+          font-size: 1vw;
+          width: 30%;
+          padding: 5px;
           background: #16191f;
           color: #75dab4;
         }
@@ -272,32 +225,28 @@ const FooterStyled = styled.div`
   .half-styled {
     position: relative;
     font-size: 0.9em;
-    letter-spacing: 3px;
+    letter-spacing: 0.2vw;
     font-size: 0.7em;
     display: inline-block;
     white-space: nowrap;
-    width: 2vw;
+    width: 10px;
     flex-grow: 0;
     padding: 0.5vw;
     background: #1f2229;
     z-index: 2;
-    font-weight: 270;
+    font-weight: 200;
   }
-  .bottomFooter {
+  .bottom {
     position: absolute;
     bottom: 0;
-    display: block;
-    /* background: #13161d; */
-    background: red;
-    width: 110vw;
-    height: 5rem;
+    background: #13161d;
+    width: 100%;
+    height: 5vw;
     display: grid;
     place-items: center;
-    font-size: 12px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    z-index: 10;
-    letter-spacing: 1px;
+    font-size: 0.8vw;
+    z-index: 2;
+    letter-spacing: 0.3vw;
   }
 `;
 export default Footer;

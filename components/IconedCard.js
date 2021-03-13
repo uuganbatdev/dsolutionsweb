@@ -9,28 +9,25 @@ function IconedCard({ img }) {
 }
 
 const IconedCardStyled = styled.div`
-  width: 9rem;
-  height: 9rem;
-  border: 0.1rem solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.7rem;
+  border: 0.1vw solid rgba(255, 255, 255, 0.1);
+  padding: 55px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
-  margin: 1.2rem;
+  margin: 15px;
   img {
-    width: 3.5rem;
-    height: 3rem;
+    height: 45px;
     object-fit: contain;
-    filter: invert(99%) sepia(98%) saturate(0%) hue-rotate(297deg)
-      brightness(105%) contrast(100%);
+    filter: brightness(205%);
   }
   @media only screen and (orientation: portrait) {
-    width: 40vw;
+    width: 90%;
     height: 40vw;
     margin: 1.5vh;
     border-radius: 1vh;
+    padding: 0;
     img {
       width: 10vh;
-      height: 10vh;
     }
   }
 `;

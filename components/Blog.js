@@ -10,7 +10,7 @@ function Blog({dateNum,date,poster,tech,img,title}) {
                     <p>{date}</p>
                 </div>
                 <div className='poster'>
-                    <h3>By / {poster}</h3>
+                    <h3>BY / {poster}</h3>
                     <p>{tech}</p>
                 </div>
                 <p className='title'>{title}</p>
@@ -30,6 +30,9 @@ const BlogStyled = styled.div`
     img {
         opacity: 0.1 !important;
     }
+	.inner-blog {
+		padding: 60px 20px !important;
+	}
     p,a,h3 {
         font-size: 3vh !important;
     }
@@ -41,6 +44,7 @@ const BlogStyled = styled.div`
         justify-content: space-around !important;
     }
 }
+	font-family: 'Barlow Condensed', sans-serif;
     &:nth-of-type(1),
     &:nth-of-type(3) {
         background: #13161d;
@@ -48,7 +52,7 @@ const BlogStyled = styled.div`
             opacity: 0;
         }
     }
-    width: 31%;
+    width: 31.5%;
     position: relative;
     &:hover img {
         opacity: 0.3;
@@ -66,7 +70,7 @@ const BlogStyled = styled.div`
     .inner-blog {
         width: 100%;
         height: 100%;
-        padding: 5vw 2vw 3vw;
+        padding: 50px 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -74,8 +78,8 @@ const BlogStyled = styled.div`
         .date {
             margin: 0;
             .datenum {
-                font-weight: 700;
-                font-size: 2vw;
+                font-weight: 400;
+                font-size: 2rem;
                 margin: 0;
                 line-height: 0;
             }
@@ -86,28 +90,41 @@ const BlogStyled = styled.div`
             justify-content: left;
             font-weight: 200;
             h3 {
-                font-weight: 400;
+                font-weight: 500;
+				font-size: 1rem;
+				text-transform: uppercase;
             }
             p {
                 color: #75dab4;
-                margin: 0 1vw;
+                margin: 0 10px; 
             }
         }
         .title {
-            margin: 1vw 0;
-            letter-spacing: 0.1vw;
-            font-size: 1.2em;
-            font-weight: 700;
+			height: 40%;
+			font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+			line-height: 2;
         }
         a {
-            letter-spacing: 0.1vw;
+		margin-top: 10px;
+            letter-spacing: 3px;
             display: inline-block;
             white-space: nowrap;
-            width: 3vw;
             flex-grow: 0;
-            padding: 0.5vw;
-            background:#1f2229;
+            padding: 10px;
             z-index: 2;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				background: #1f2229;
+				width: 50px;
+				z-index: -1;
+			}
         }
     }
 `

@@ -36,7 +36,7 @@ function CommentSection() {
         <CommentSectionStyled>
             <div className='inner-comment'>
                 <div className='head'>
-                    <p>WHAT PEOPLE SAY?</p>
+                    <p className='home-heading-top'>WHAT PEOPLE SAY?</p>
                     <h2>TESTIMONIALS.</h2>
                 </div>
                 <Swiper
@@ -128,11 +128,6 @@ const CommentSectionStyled = styled.div`
         margin-top: 1vw;
     }
     .head {
-        p {
-            color: #75dab4;
-            text-align: center;
-            letter-spacing: 0.5vw;
-        }
         h2 {
             margin: 0;
             font-size: 4vw;

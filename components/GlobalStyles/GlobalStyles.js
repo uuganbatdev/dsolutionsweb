@@ -4,13 +4,8 @@ const GlobalStyles = () => (
   <>
     <Global
       styles={css`
-        @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;600;700&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Righteous&family=Yanone+Kaffeesatz:wght@700&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DotGothic16&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=DotGothic16&family=Nosifer&family=Saira+Stencil+One&display=swap");
-
+        @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
         @media only screen and (orientation: portrait) {
           body {
             font-size: 2vh !important;
@@ -41,18 +36,27 @@ const GlobalStyles = () => (
           color: white;
           font-family: "Poppins", sans-serif;
         }
-        p {
-          font-weight: 200;
+        .slide-desc {
+          width: 60% !important;
         }
-        a {
-          color: white;
-          text-decoration: none;
-          display: inline-block;
-          font-weight: 200;
-        }
-        h2 {
-          font-size: 5.5rem;
-          letter-spacing: 0.3vw;
+        .home-anchor {
+          font-family: "Barlow Condensed", sans-serif;
+          letter-spacing: 0.2rem;
+          font-size: 0.9rem;
+          font-weight: 100;
+          padding: 0.7rem 0.5rem;
+          z-index: 2;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #181b22;
+            width: 50px;
+            height: 100%;
+            z-index: -1;
+          }
         }
       `}
     />

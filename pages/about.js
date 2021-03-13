@@ -64,10 +64,5 @@ const AboutStyled = styled.div`
   }
   width: 100%;
   margin: 0 auto;
-  h2 {
-    font-family: "Poppins", sans-serif;
-    letter-spacing: normal;
-    font-size: 2em !important;
-  }
 `;
 export default About;
