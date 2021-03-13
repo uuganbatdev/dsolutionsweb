@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import Link from "next/link";
+import styled from "styled-components";
 import { useEffect } from "react";
+import HeaderMobile from "./HeaderMobile";
 
-function Header() {
+const Header = () => {
   useEffect(() => {
     let header = document.querySelector(".header");
     window.onscroll = () => {
@@ -12,39 +12,46 @@ function Header() {
     };
   });
   return (
-    <HeaderStyled>
+    <Nav>
       <div className="header">
         <div className="inner-header">
-          <img src="bolt.png" alt="logo" />
-          <nav>
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </li>
-          </nav>
+          <div className="headerLogo">
+            <img
+              src="https://scontent.fuln2-1.fna.fbcdn.net/v/t1.0-9/104666224_142549167446902_1700319279236480740_o.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=w-QLp4spvBcAX-w5wJL&_nc_oc=AQlGZ3b6SnQOO5zSq9l71_BNxwH6cmtWFloi2y8AgmPNC5xBEsLdDdY4xs8s4EJ1DiE&_nc_ht=scontent.fuln2-1.fna&oh=6acac4984cc86b76fa8e5f007af479d5&oe=606BB6E8"
+              alt="logo"
+            />
+          </div>
+          <HeaderMobile />
         </div>
       </div>
-    </HeaderStyled>
+    </Nav>
   );
-}
+};
 
-const HeaderStyled = styled.div`
-  position: absolute;
+const Nav = styled.div`
+  position: fixed;
+  top: 0;
   z-index: 100000;
   width: 100%;
+  background: #11141b;
   .header {
-    width: 100%;
+    width: 80%;
     border-bottom: 0.1vw solid rgba(255, 255, 255, 0.3);
     height: 5.2rem;
     top: 0;
     transition: 0.5s;
   }
+  .headerLogo {
+    display: block;
+    width: 10%;
+    img {
+      margin: auto 0;
+      width: 30%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+
   .fill-header {
     background: #11141b;
     transition: 0.5s;
@@ -52,34 +59,16 @@ const HeaderStyled = styled.div`
   .inner-header {
     z-index: 100000;
     margin: 0 auto;
-    width: 80%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
   }
-  img {
-    margin: 1.5rem 0;
-    height: 60%;
-    object-fit: contain;
-  }
-  nav {
-    display: flex;
-    list-style: none;
-    li {
-      a {
-        font-family: "Poppins", sans-serif;
-        padding: 1vw 1.4vw;
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        font-size: 0.75em;
-        display: inline-flex;
-        align-items: center;
-        font-weight: 500;
-        letter-spacing: 0.1vw;
-      }
-    }
+
+  .toAbouts {
+    padding-left: 1px solid red;
+    color: red;
   }
 `;
 export default Header;

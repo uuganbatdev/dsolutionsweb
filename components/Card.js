@@ -11,18 +11,38 @@ function Card({ img, heading, parag }) {
 }
 
 const CardStyled = styled.div`
-  @media only screen and (orientation: portrait) {
-    width: 100% !important;
-    height: auto !important;
-    padding: 6vh 0 !important;
-    margin: 3vh 0 !important;
+  @media (max-width: 768px) {
+    width: 95% !important;
+    height: 360px !important;
+    padding: 2.5rem 0 !important;
+    margin: 2.5rem 1rem;
     img {
-      width: 5vh !important;
-      height: 5vh !important;
+      width: 5rem;
+      height: 5rem;
+    }
+    h3 {
+      font-size: 30px;
     }
     p {
       line-height: normal !important;
       width: 80% !important;
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 1024px) and (min-width: 769px) {
+    width: 30vw;
+    margin-left: 2.5vw;
+
+    img {
+      width: 3rem !important;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 18px;
     }
   }
   background: #151921;

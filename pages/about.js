@@ -62,7 +62,7 @@ const AboutStyled = styled.div`
   @media only screen and (orientation: portrait) {
     width: 95%;
   }
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   h2 {
     font-family: "Poppins", sans-serif;

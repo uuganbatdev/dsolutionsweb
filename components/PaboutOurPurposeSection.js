@@ -46,28 +46,36 @@ function PaboutOurPurposeSection() {
 }
 
 const PaboutOurPurposeSectionStyled = styled.div`
-  height: 100%S;
+  height: 100%;
+  margin: auto;
   width: 100%;
   position: relative;
   .bg {
     position: absolute;
     width: 100vw;
-    left: -10vw;
     height: 100vh;
-    background: #0c0f16;
-    background-image: linear-gradient(to right, #1a1e25 40%, #0c0f16 40% 100%);
+    background: #11141b;
+    background-image: linear-gradient(
+      to right,
+      #1a1e25 40vw,
+      #11141b 40vw 100vw
+    );
   }
   .our-purpose {
-    z-index: 2;
-    width: 100%;
-    height: 100vh;
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: right;
     .our-purpose-left {
+      position: absolute;
+      right: 53%;
+      top: 10%;
       z-index: 10;
-      width: 42%;
-      height: 78%;
+      width: 30rem;
+      height: 35rem;
+      object-fit: contain;
       img {
         width: 100%;
         height: 100%;
@@ -76,10 +84,10 @@ const PaboutOurPurposeSectionStyled = styled.div`
     }
     .our-purpose-right {
       z-index: 10;
-      width: 54%;
+      width: 30rem;
       height: 78%;
-      padding: 5vw;
-      padding-top: 3vw;
+      margin-left: 53%;
+      margin-top: 6%;
       li {
         &::marker {
           background: red;
@@ -88,18 +96,38 @@ const PaboutOurPurposeSectionStyled = styled.div`
       h2 {
         font-family: "Barlow Condensed", sans-serif;
         font-weight: bold;
-        font-size: 2.5em !important;
+        font-size: 40px !important;
+        color: #fff;
         margin: 0;
       }
       p {
-        font-size: 0.85em;
+        font-size: 15px;
         font-family: "Poppins", sans-serif;
         font-weight: 400;
-        opacity: 0.7;
+        color: #c8c8c8;
       }
     }
   }
-  @media only screen and (orientation: portrait) {
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    width: 100vw;
+    background: #1a1e25;
+    .our-purpose {
+      width: 95%;
+      margin: auto;
+    }
+    .our-purpose-left {
+      width: 36% !important;
+      height: 65% !important;
+      object-fit: contain;
+      margin-top: 5%;
+      img {
+        opacity: 1;
+      }
+    }
+    .our-purpose-right {
+    }
+  }
+  @media only screen and (max-width: 768px) {
     .our-purpose-left {
       width: 75% !important;
       position: absolute;

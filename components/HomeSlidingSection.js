@@ -31,7 +31,8 @@ const homeBigSlides = [
 function HomeSlidingSection() {
   return (
     <HomeSlidingSectionStyled>
-      {/* <Swiper
+      {
+        /* <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
@@ -52,8 +53,9 @@ function HomeSlidingSection() {
                             </div>
                            </SwiperSlide>
                         })}
-                </Swiper> 
-                <Wave />*/}
+                </Swiper> */
+        <Wave />
+      }
     </HomeSlidingSectionStyled>
   );
 }

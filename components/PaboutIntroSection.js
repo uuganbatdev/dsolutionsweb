@@ -57,28 +57,75 @@ function PaboutIntroSection() {
 }
 
 const PaboutIntroSectionStyled = styled.div`
+  @media (max-width: 1024px) and (min-width: 769px) {
+    position: relative;
+    left: -2.5%;
+    .intro-container {
+      display: flex;
+      width: 75%;
+      h2 {
+        height: 250px !important;
+        font-size: 30px !important;
+      }
+      p {
+        height: 300px;
+        width: 60%;
+        font-size: 16px;
+        line-height: 2 !important;
+      }
+    }
+    .about-cover-container {
+      h1 {
+        width: 80%;
+        left: 10px;
+        font-size: 70px !important;
+      }
+      img {
+        width: 100vw;
+        height: 75vh;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0.6;
+        position: absolute;
+        left: 0px;
+      }
+    }
+
+    .cards-container {
+      justify-content: flex-start !important;
+      width: 90%;
+    }
+  }
+
+  width: 1200px;
+  margin: 0 auto;
   .cards-container {
+    height: 50%;
     width: 100%;
     display: flex;
+    margin-bottom: 8rem;
     justify-content: space-between;
-    margin: 9rem 0;
   }
   .about-cover-container {
     height: 75vh;
     img {
       width: 100vw;
       height: 75vh;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
+      /* object-fit: cover;
+      position: absolute; */
       opacity: 0.6;
+      position: absolute;
+      left: 0px;
+      /* background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover; */
     }
     h1 {
       position: absolute;
       z-index: 10;
       left: 50%;
-      top: 25%;
+      top: 30%;
       transform: translate(-50%, -50%);
       font-size: 5em;
       font-weight: 500;
@@ -100,27 +147,37 @@ const PaboutIntroSectionStyled = styled.div`
     p {
       width: 90%;
       font-family: "Poppins", sans-serif;
+      font-size: 20px;
       font-weight: 300;
       text-align: justify;
       opacity: 0.8;
       line-height: 1.9rem;
     }
   }
-  @media only screen and (orientation: portrait) {
+  @media (max-width: 768px) {
+    width: 100vw;
+
+    h1 {
+      font-size: 70px !important;
+    }
+
     .intro-container {
+      display: block;
       height: auto;
       flex-direction: column;
       align-items: start;
+      width: 100%;
       h2 {
         width: 100%;
         margin-bottom: 0;
       }
       p {
-        width: 100%;
+        width: 90%;
       }
     }
     .cards-container {
       flex-direction: column;
+      width: 93%;
     }
   }
 `;
