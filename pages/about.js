@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import PaboutIntroSection from "../components/PaboutIntroSection.js";
-import PaboutCommentSection from "../components/PaboutCommentSection.js";
+// import PaboutCommentSection from "../components/PaboutCommentSection.js";
 import PaboutOurTeamSection from "../components/PaboutOurTeamSection.js";
 import PaboutOurPurposeSection from "../components/PaboutOurPurposeSection.js";
-import PaboutOurClientsSection from "../components/PaboutOurClientsSection.js";
+// import PaboutOurClientsSection from "../components/PaboutOurClientsSection.js";
 import PaboutConnectUsSection from "../components/PaboutConnectUsSection.js";
+import AboutHeader from "../components/Hamburger/aboutHeader";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay, Pagination } from "swiper";
 SwiperCore.use([Navigation, Autoplay, Pagination]);
 
@@ -48,21 +48,19 @@ const commentData = [
 function About() {
   return (
     <AboutStyled>
+      <AboutHeader />
       <PaboutIntroSection />
-      <PaboutCommentSection />
+      {/* <PaboutCommentSection /> */}
       <PaboutOurTeamSection />
       <PaboutOurPurposeSection />
-      <PaboutOurClientsSection />
+      {/* <PaboutOurClientsSection /> */}
       <PaboutConnectUsSection />
     </AboutStyled>
   );
 }
 
 const AboutStyled = styled.div`
-  @media only screen and (orientation: portrait) {
-    width: 95%;
-  }
-  width: 100%;
-  margin: 0 auto;
+  /* width: 100%; */
+  margin: 0;
 `;
 export default About;

@@ -1,28 +1,53 @@
 import styled from "@emotion/styled";
+import React from "react";
+import Swal from "sweetalert2";
+
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  function selfie() {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Таныг амжилттай бүртгэлээ",
+      showConfirmButton: true,
+      // timer: 2000,
+    });
+  }
+
+  const { t, i18n } = useTranslation();
+
   return (
-    <FooterStyled>
-      <span className="coloredbg"></span>
+    <FooterStyled id="холбоо-барих">
+      {/* <span className="coloredbg"></span>
+      <span className="coloredbg2"></span> */}
       <div className="left">
-        <img src="bolt.png" alt="" />
+        <img src="DiverseLogo.png" alt="" className="logo" />
         <div className="company-location">
           <p>
-            <span>Email:</span>diverseSolution@diversolutions.com
+            <span>{t(`contactLeftMail`)}</span>
+            <a target="_blank" href="mailto:info@dsolutions.tech">
+              {t(`contactLeftMailDesc`)}
+            </a>
           </p>
           <p>
-            <span>Address:</span>BGD, 3khoroo, 71-81
+            <span>{t(`contactLeftAdd`)}</span>
+            {t(`contactLeftAddDesc`)}
           </p>
           <p>
-            <span>Phone:</span>+976 95941551
+            <span>{t(`contactLeftPhone`)}</span>
+            <a href="tel:+97691951199">{t(`contactLeftPhoneDesc`)}</a>
           </p>
         </div>
         <h3 className="half-styled">
-          <span></span>
-          FOLLOW US
+          <span>{t(`contactLeftFollowSpan`)}</span>
+          {t(`contactLeftFollow`)}
         </h3>
         <div className="social-accounts">
-          <a href="#">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/aidiversesolutions/"
+          >
             <img src="facebook.png" alt="facebook" />
           </a>
           <a href="#">
@@ -35,15 +60,15 @@ function Footer() {
       </div>
       <div className="right">
         <h3 className="half-styled">
-          <span></span>
-          NEWS LATTER
+          <span>{t(`contactRightTitleSpan`)}</span>
+          {t(`contactRightTitle`)}
         </h3>
         <div className="email-box-container">
-          <p>Sign up for subscribe out newsletter!</p>
-          <div className="inner-box">
-            <input type="email" placeholder="Your Email" />
-            <button>SUBSCRIBE</button>
-          </div>
+          <p>{t(`contactRightDesc`)}</p>
+          <form className="inner-box">
+            <input type="email" placeholder={t(`contactRightInput`)} />
+            <button onClick={selfie}>{t(`contactRightButton`)}</button>
+          </form>
         </div>
         {/*
 				<h3 className='half-styled'>
@@ -52,51 +77,156 @@ function Footer() {
                 </h3>
 				*/}
       </div>
+      <span className="bottomColor"></span>
       <div className="bottom">
-        © {new Date().getFullYear()} by DIVERSE SOLUTIONS.
+        <p>{t(`contactBottomDesc`)}</p>
       </div>
     </FooterStyled>
   );
 }
 
 const FooterStyled = styled.div`
-  @media only screen and (orientation: portrait) {
-    width: 95% !important;
+  @media (max-width: 1024px) and (min-width: 769px) {
+    width: 100vw !important;
+    box-sizing: border-box;
+    height: 80vh;
+    padding: 0;
+    margin: 0;
+
+    .left {
+      width: 50vw !important;
+      height: 70vh !important;
+      padding: 100px 20px 90px 85px;
+      background: #151921;
+      img {
+        width: 5vh !important;
+      }
+      .company-location {
+        font-size: 1.5vh;
+        opacity: 0.8;
+      }
+    }
+
+    .right {
+      position: sticky;
+      width: 50vw !important;
+      height: 70vh !important;
+      padding: 150px 70px 90px 70px !important;
+      background: #0e1016;
+      right: 0 !important;
+      .inner-box {
+        height: 4vh;
+      }
+      p {
+        font-size: 1.5vh;
+      }
+    }
+
+    .our-work {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5vh;
+      .our-work-img {
+        margin-top: 2vh;
+        justify-content: space-between;
+        padding: 0 20px;
+        img {
+          width: 3rem;
+          object-fit: contain;
+          margin: 0 2vh;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .bottom {
+      position: absolute !important;
+      bottom: 0 !important;
+      height: 10vh !important;
+      width: 100% !important;
+      p {
+        left: 20vw;
+        position: absolute;
+      }
+    }
+
+    .bottomColor,
+    .coloredbg2,
+    .coloredbg {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100vw !important;
     flex-direction: column;
+    .bottomColor,
+    .coloredbg2 {
+      display: none;
+    }
     p,
     h3 {
-      font-size: 2vh !important;
+      font-size: 2.2vh !important;
     }
     .coloredbg,
     .left,
     .right,
     .bottom {
-      width: 100% !important;
+      position: relative;
+      left: -18px;
+      width: 100vw !important;
       height: auto !important;
       justify-content: center !important;
       align-items: center !important;
     }
     .left,
     .right {
+      left: 0;
+      right: 0;
+      width: 100%;
       align-items: start !important;
       margin: 3vh 0;
+    }
+    .left {
+      padding: 30px 20px !important;
+      background: #151920;
+      p {
+        opacity: 1;
+        letter-spacing: 2px;
+      }
+    }
+    .right {
+      padding: 20px 10px 50px 30px !important;
+      p {
+        opacity: 0.6;
+      }
+      .inner-box button {
+        font-size: 1.7vh !important;
+      }
     }
     img {
       width: 6vh !important;
       height: 6vh !important;
     }
     .social-accounts {
+      width: 60%;
+      margin: auto;
+      justify-content: space-around !important;
       a {
-        width: 8vh !important;
-        height: 8vh !important ;
+        width: 6vh !important;
+        height: 6vh !important ;
         img {
-          width: 3vh !important;
-          height: 3vh !important;
+          width: 2vh !important;
+          height: 2vh !important;
         }
       }
     }
     .half-styled {
       width: 5vh !important;
+      letter-spacing: 3px !important;
+      font-size: 13px !important;
+      span {
+      }
     }
     .email-box-container {
       width: 90% !important;
@@ -107,37 +237,60 @@ const FooterStyled = styled.div`
         font-size: 2vh !important;
       }
     }
+    input {
+      background: rgba(255, 255, 255, 0.1);
+      width: 70vh !important;
+    }
     .bottom {
-      height: 8vh !important;
-      width: 100vw !important;
-      left: -2.5% !important;
-      font-size: 2vh !important;
+      width: 100%;
+      left: 0;
+      right: 0;
+      opacity: 0.6;
+      height: 7% !important;
+      p {
+        font-size: 1.2vh !important;
+        padding: 0 3vh;
+      }
     }
   }
   font-family: "Barlow Condensed", sans-serif;
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 8vw;
-  padding-bottom: 8vw;
+  padding-bottom: 5vw;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+
   .coloredbg {
     z-index: 1;
     position: absolute;
     background: #151921;
-    width: 50vw;
+    width: 100vw;
     top: 0;
     right: 50%;
     height: 100%;
   }
+  .coloredbg2 {
+    z-index: 1;
+    position: absolute;
+    background: #11141b;
+    width: 50vw;
+    top: 0;
+    left: 50%;
+    height: 100%;
+  }
   .left {
+    height: 60vh;
+    width: 50vw;
+    padding: 100px 15px 90px 85px;
+    background: #151921;
     h3 {
       margin: 30px 0;
     }
     width: 50%;
-    height: 15vw;
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -149,9 +302,14 @@ const FooterStyled = styled.div`
       margin-bottom: 1vw;
     }
     .company-location {
+      p {
+        letter-spacing: 1px;
+        font-weight: 100;
+      }
       span {
         font-weight: bold;
         margin-right: 1vw;
+        letter-spacing: 2px;
       }
     }
     .social-accounts {
@@ -186,16 +344,23 @@ const FooterStyled = styled.div`
     }
   }
   .right {
-    width: 40%;
-    height: 20vw;
+    width: 49.4vw;
+    height: 60vh;
+    background: #0c0f16;
+    padding: 100px 70px 90px 100px;
     display: flex;
     flex-direction: column;
+    text-align: start;
     h3 {
       margin: 0;
     }
     .email-box-container {
       margin: 15px 0 15px 0;
+
+      z-index: 1;
       p {
+        padding-bottom: 20px;
+        opacity: 0.5;
       }
       .inner-box {
         display: flex;
@@ -208,13 +373,24 @@ const FooterStyled = styled.div`
           color: white;
           width: 70%;
           font-size: 1rem;
+          background: rgba(255, 255, 255, 0.01);
+          font-family: "Barlow Condensed", sans-serif;
+          border: 1px solid #1f2229;
+          border-right: none;
+          z-index: 2;
         }
         button {
-          font-size: 1vw;
-          width: 30%;
+          font-size: 0.8rem;
+          width: 35%;
           padding: 5px;
-          background: #16191f;
+          background: #ffffff05;
           color: #75dab4;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: "Barlow Condensed", sans-serif;
+          z-index: 2;
+          border: 1px solid #1f2229;
+          cursor: pointer;
         }
       }
     }
@@ -224,9 +400,8 @@ const FooterStyled = styled.div`
   }
   .half-styled {
     position: relative;
-    font-size: 0.9em;
     letter-spacing: 0.2vw;
-    font-size: 0.7em;
+    font-size: 0.8rem;
     display: inline-block;
     white-space: nowrap;
     width: 10px;
@@ -234,19 +409,58 @@ const FooterStyled = styled.div`
     padding: 0.5vw;
     background: #1f2229;
     z-index: 2;
-    font-weight: 200;
+    font-weight: 300;
+    span {
+      padding: 7px 0px 7px 7px;
+      margin-top: 0px;
+      padding-right: 0px;
+      background: #1f2229;
+    }
   }
+
+  /* .bottomColor {
+    z-index: 1;
+    position: absolute;
+    background: #13161d;
+    width: 1000vw;
+    bottom: 0;
+    left: -5000px;
+    height: 5vw;
+  } */
+
+  .our-work {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+
+    .our-work-img {
+      width: 100%;
+      margin-top: 2vh;
+      padding: 0 20px;
+      z-index: 1;
+      align-items: center;
+      margin-left: 20%;
+      img {
+        width: 4rem;
+        object-fit: contain;
+        margin: 0 2vh;
+        border-radius: 50%;
+      }
+    }
+  }
+
   .bottom {
     position: absolute;
     bottom: 0;
-    background: #13161d;
+    color: #999;
     width: 100%;
     height: 5vw;
     display: grid;
     place-items: center;
-    font-size: 0.8vw;
+    font-size: 0.813rem;
     z-index: 2;
-    letter-spacing: 0.3vw;
+    letter-spacing: 2px;
+    background: #13161d;
   }
 `;
 export default Footer;

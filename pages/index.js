@@ -1,13 +1,15 @@
 import Head from "next/head";
+import MainHeader from "../components/Hamburger/mainHeader";
 import HomeSlidingSection from "../components/HomeSlidingSection";
 import AboutUsSection from "../components/AboutUsSection";
 import ServiceSection from "../components/ServiceSection";
 //import IntroVideoSection from '../components/IntroVideoSection.js'
 import OurWorksSection from "../components/OurWorksSection";
-import CommentSection from "../components/CommentSection";
-import BlogSection from "../components/BlogSection";
-import PaboutCommentSection from "../components/PaboutCommentSection";
-import PaboutOurClientsSection from "../components/PaboutOurClientsSection";
+// import CommentSection from "../components/CommentSection";
+// import BlogSection from "../components/BlogSection";
+// import PaboutCommentSection from "../components/PaboutCommentSection";
+// import PaboutOurClientsSection from "../components/PaboutOurClientsSection";
+import PaboutConnectUsSection from "../components/PaboutConnectUsSection.js";
 
 export default function Home() {
   return (
@@ -39,13 +41,15 @@ export default function Home() {
           var background_particle_effect_line_color = "rgba(255,255,255,0.65)";
         </script>
       </Head>
+      <MainHeader />
       <HomeSlidingSection />
       <AboutUsSection />
       <ServiceSection />
       <OurWorksSection />
-      <PaboutCommentSection />
-      <PaboutOurClientsSection />
-      <BlogSection />
+      <PaboutConnectUsSection />
+      {/* <PaboutCommentSection />
+      <PaboutOurClientsSection /> */}
+      {/* <BlogSection /> */}
       <script
         type="text/javascript"
         src="../wp-content/themes/gravity_demo/assets/js/plugins0a05.js?ver=20170620"

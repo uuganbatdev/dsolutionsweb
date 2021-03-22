@@ -1,45 +1,38 @@
 import styled from "@emotion/styled";
 import Card from "./Card.js";
 
+import { useTranslation } from "react-i18next";
+
 function PaboutIntroSection() {
+  const { t, i18n } = useTranslation();
+
   let cards = [
     {
-      img: "/bolt.png",
-      heading: "Digital Marketing",
-      parag: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ",
+      img: "/web.png",
+      heading: t(`aboutAboutUsCard1Title`),
+      parag: t(`aboutAboutUsCard1Desc`),
     },
     {
       img: "/mobile-phone.png",
-      heading: "Mobile Development",
-      parag: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ",
+      heading: t(`aboutAboutUsCard2Title`),
+      parag: t(`aboutAboutUsCard2Desc`),
     },
     {
-      img: "/magic-wand.png",
-      heading: "Fast Service",
-      parag: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ",
+      img: "/graphic.png",
+      heading: t(`aboutAboutUsCard3Title`),
+      parag: t(`aboutAboutUsCard3Desc`),
     },
   ];
 
   return (
-    <PaboutIntroSectionStyled className="AboutSection1">
+    <PaboutIntroSectionStyled className="AboutSection1" id="бидний-тухай">
       <div className="about-cover-container">
-        <h1>About us</h1>
-        <img
-          src="http://innovationplans.com/idesign/avo2/avo-dark/img/slid/1.jpg"
-          alt="bg"
-        />
+        {/* <h1>About us</h1> */}
+        <img src="about7.jpeg" alt="bg" />
       </div>
-      <div className="intro-container">
-        <h2>Who We Are ?</h2>
-        <p>
-          We develop creative solutions for small and big brands alike, build
-          authentic product identities and much more.Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit sit non facilisis vitae eu. Ultrices ut
-          diam morbi risus dui, nec eget at lorem in id tristique in elementum
-          leo nisi eleifend placerat magna lacus elementum ornare vehicula odio
-          posuere quisque ultrices tempus cras id blandit maecenas in ornare
-          quis dolor tempus risus vitae feugiat fames aliquet sed.
-        </p>
+      <div className="intro-container" id="about2">
+        <h2 className="textanimation1">{t(`aboutAboutUsTitle2`)}</h2>
+        <p className="textAnimation2">{t(`aboutAboutUsDesc`)}</p>
       </div>
       <div className="cards-container">
         {cards.map(({ img, heading, parag, colored, position }) => (
@@ -59,10 +52,10 @@ function PaboutIntroSection() {
 const PaboutIntroSectionStyled = styled.div`
   @media (max-width: 1024px) and (min-width: 769px) {
     position: relative;
-    left: -2.5%;
     .intro-container {
       display: flex;
-      width: 75%;
+      width: 90vw;
+      margin-bottom: 0 !important;
       h2 {
         height: 250px !important;
         font-size: 30px !important;
@@ -70,8 +63,9 @@ const PaboutIntroSectionStyled = styled.div`
       p {
         height: 300px;
         width: 60%;
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 2 !important;
+        margin-left: 6vw;
       }
     }
     .about-cover-container {
@@ -98,6 +92,7 @@ const PaboutIntroSectionStyled = styled.div`
   }
 
   width: 1200px;
+  /* position: relative; */
   margin: 0 auto;
   .cards-container {
     height: 50%;
@@ -107,12 +102,13 @@ const PaboutIntroSectionStyled = styled.div`
     justify-content: space-between;
   }
   .about-cover-container {
+    width: 100%;
     height: 75vh;
     img {
       width: 100vw;
       height: 75vh;
-      /* object-fit: cover;
-      position: absolute; */
+      object-fit: cover;
+      position: absolute;
       opacity: 0.6;
       position: absolute;
       left: 0px;
@@ -146,19 +142,22 @@ const PaboutIntroSectionStyled = styled.div`
     }
     p {
       width: 90%;
+      color: #c8c8c8;
       font-family: "Poppins", sans-serif;
-      font-size: 20px;
+      font-size: 1rem;
       font-weight: 300;
       text-align: justify;
       opacity: 0.8;
-      line-height: 1.9rem;
+      line-height: 2rem;
     }
   }
   @media (max-width: 768px) {
-    width: 100vw;
+    width: 100%;
 
     h1 {
-      font-size: 70px !important;
+      width: 90%;
+      text-align: center;
+      font-size: 8vh !important;
     }
 
     .intro-container {
@@ -169,15 +168,17 @@ const PaboutIntroSectionStyled = styled.div`
       width: 100%;
       h2 {
         width: 100%;
+        font-size: 4vh !important;
         margin-bottom: 0;
       }
       p {
         width: 90%;
+        font-size: 2.5vh !important;
       }
     }
     .cards-container {
       flex-direction: column;
-      width: 93%;
+      width: 96%;
     }
   }
 `;

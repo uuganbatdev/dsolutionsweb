@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay, Pagination } from "swiper";
 import Wave from "./Wave";
 
@@ -30,7 +29,7 @@ const homeBigSlides = [
 ];
 function HomeSlidingSection() {
   return (
-    <HomeSlidingSectionStyled>
+    <HomeSlidingSectionStyled id="Нүүр">
       {
         /* <Swiper
                 spaceBetween={0}

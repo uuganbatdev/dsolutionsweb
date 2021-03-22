@@ -2,37 +2,44 @@ import styled from "@emotion/styled";
 import CustomCard from "./CustomCard.js";
 import SectionHeading from "./SectionHeading.js";
 
+import { useTranslation } from "react-i18next";
+
 function ServiceSection() {
+  const { t, i18n } = useTranslation();
+
   return (
-    <ServiceSectionStyled>
+    <ServiceSectionStyled id="үйлчилгээ">
       <div className="inner-container">
-        <SectionHeading heading={"services"} headingTop={"best features"} />
+        <SectionHeading
+          heading={t(`serviceTitle2`)}
+          headingTop={t(`serviceTitle1`)}
+        />
         <div className="cards-container">
           <div className="imaged-card">
             <div className="inner-imaged-card">
-              <span>Best Of</span>
-              <span>Our Features</span>
+              <span>{t(`serviceCard1Top`)}</span>
+              <span> {t(`serviceCard1Bottom`)}</span>
             </div>
           </div>
           <CustomCard
-            imgSource={"/bolt.png"}
-            firstHead={"Graphic"}
-            secondHead={"Clean Design"}
-            text={"Tempore corrupti temporibus fuga earum asperiores fugit."}
+            imgSource={"/web.png"}
+            firstHead={t(`serviceCard2Title1`)}
+            secondHead={t(`serviceCard2Title2`)}
+            text={t(`serviceCard2Desc`)}
             bgColor={"#181b21"}
           />
           <CustomCard
-            imgSource={"/bolt.png"}
-            firstHead={"Web &"}
-            secondHead={"Mobile Design"}
-            text={"Tempore corrupti temporibus fuga earum asperiores fugit."}
+            imgSource={"/app.png"}
+            firstHead={t(`serviceCard3Title1`)}
+            secondHead={t(`serviceCard3Title2`)}
+            text={t(`serviceCard3Desc`)}
             bgColor={"#1a1e25"}
           />
           <CustomCard
-            imgSource={"/bolt.png"}
-            firstHead={"Social"}
-            secondHead={"Media Marketing"}
-            text={"Tempore corrupti temporibus fuga earum asperiores fugit."}
+            imgSource={"/graphic.png"}
+            firstHead={t(`serviceCard4Title1`)}
+            secondHead={"-"}
+            text={t(`serviceCard4Desc`)}
             bgColor={"#20242c"}
           />
         </div>
@@ -46,48 +53,59 @@ const ServiceSectionStyled = styled.div`
     width: 100%;
   }
   width: 100%;
-  overflow-x: hidden;
   .inner-container {
     width: 1200px;
     margin: 0 auto;
   }
+  .titles {
+    color: red;
+  }
   .cards-container {
-    width: 100%;
+    margin: 0 auto;
     display: flex;
   }
   .imaged-card {
-    width: 25%;
+    width: 25vw;
     position: relative;
-    background-image: url("http://avo.smartinnovates.com/wp-content/uploads/2020/09/1-2.jpg");
+    background-image: url("service3.png");
     background-size: cover;
     background-repeat: no-repeat;
     .inner-imaged-card {
       width: 100%;
       height: 100%;
-      padding: 30% 10%;
+      padding: 25% 10%;
       background: rgba(12, 15, 22, 0.8);
       span {
         display: block;
         font-family: "Barlow Condensed", sans-serif;
         font-weight: 500;
         line-height: 1.5;
-        font-size: 2rem;
+        font-size: 1.875rem;
       }
     }
   }
 
-  @media only screen and (orientation: portrait) {
+  @media (max-width: 1200px) and (min-width: 1025px) {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
     margin-top: 0 !important;
-    width: 95% !important;
     margin: 0 auto;
     padding: 0 !important;
     .inner-container {
       width: 100vw;
+      object-fit: contain;
     }
     .imaged-card {
       width: 100%;
+      height: 40vh;
       .inner-imaged-card {
-        padding: 35% 15%;
+        padding: 10% 5%;
+        span {
+          font-size: 50px;
+        }
       }
     }
     .cards-container {

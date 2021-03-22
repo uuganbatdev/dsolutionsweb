@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay, Pagination } from "swiper";
 SwiperCore.use([Navigation, Autoplay, Pagination]);
@@ -54,8 +57,15 @@ function PaboutCommentSection() {
     },
   ];
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+    Aos.refresh();
+  }, []);
+
   return (
-    <PaboutCommentSectionStyled>
+    <PaboutCommentSectionStyled id="харилцагч">
       <img
         src="http://innovationplans.com/idesign/avo2/avo-dark/img/slid/1.jpg"
         alt="bgiamge"
@@ -64,14 +74,24 @@ function PaboutCommentSection() {
       <div className="inner-container">
         <div className="comment-left">
           <div className="play-button">
-            <img src="play-btn.png" alt="playbtn" />
+            <img data-aos="zoom-in-right" src="play-btn.png" alt="playbtn" />
           </div>
-          <h2>So that's us. There's no other way to put it.</h2>
+          <h2 data-aos="fade-up">
+            So that's us. There's no other way to put it.
+          </h2>
         </div>
         <div className="comment-right">
           <div className="inner-right">
-            <p className="card-title">OUR HAPPY CLIENTS</p>
-            <h3 className="card-header">What Client's Say?</h3>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              className="card-title"
+            >
+              OUR HAPPY CLIENTS
+            </p>
+            <h3 data-aos="fade-left" className="card-header">
+              What Client's Say?
+            </h3>
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -97,30 +117,90 @@ function PaboutCommentSection() {
           </div>
         </div>
       </div>
+      <div className="toTop">
+        <a href="#Нүүр">↑</a>
+      </div>
     </PaboutCommentSectionStyled>
   );
 }
 
 const PaboutCommentSectionStyled = styled.div`
+  .toTop {
+    width: 3rem;
+    object-fit: contain;
+    color: #fff;
+    height: 3rem;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+    z-index: 1000000;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    a {
+      font-size: 2rem;
+    }
+  }
+
   @media (max-width: 1024px) and (min-width: 769px) {
+    flex-direction: column;
+    height: auto;
+    hr {
+      opacity: 0.2 !important;
+      height: 0.2vh !important;
+    }
     .bg-image {
-      height: 80vh !important;
-      left: -3vw;
     }
-
+    .comment-left,
+    .comment-right {
+      width: 100%;
+    }
+    .play-button {
+      margin-left: 5vw;
+      width: 10vh !important;
+      height: 10vh !important;
+    }
+    .inner-container {
+      flex-direction: column;
+      width: 100%;
+    }
     .comment-left {
-      z-index: 1;
-      background: red;
-    }
-
-    .commen-right {
-      .inner-right {
-        .slide {
-        }
+      h2 {
+        margin-bottom: 1vh;
+        width: 80%;
+        margin: 20px 0 20px 20px;
+        font-size: 1.5em !important;
+      }
+      .statistics {
+        margin: 3vh 0;
       }
     }
-
-    .slide {
+    .text {
+      font-size: 30px !important;
+    }
+    .comment-right {
+      width: 100% !important;
+      .inner-right {
+        padding: 5vh 4vh !important;
+        width: 100%;
+        height: 70vh;
+        h3 {
+          margin-bottom: 4vh;
+        }
+        p {
+          line-height: 1.7em;
+        }
+        img {
+          width: 10vh !important;
+          height: 10vh !important;
+        }
+        .swiper-pagination-bullet {
+          margin: 0 0.5vh !important;
+          height: 1vh !important;
+          width: 1vh !important;
+        }
+      }
     }
   }
 
@@ -160,6 +240,7 @@ const PaboutCommentSectionStyled = styled.div`
     display: flex;
     flex-direction: column;
     h2 {
+      text-shadow: 0 5px rgba(255, 255, 255, 0.05);
       color: #fff;
       font-family: "Poppins", Sans-serif;
       font-size: 45px;
@@ -219,7 +300,7 @@ const PaboutCommentSectionStyled = styled.div`
   .comment-right {
     z-index: 10;
     width: 40%;
-    height: 100%;
+    height: 80%;
     display: flex;
     .inner-right {
       padding: 70px 40px;

@@ -1,8 +1,19 @@
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import styled from "@emotion/styled";
 
 function ListedCard({ heading, parag, position }) {
+  useEffect(() => {
+    Aos.init({
+      duration: 2500,
+      easing: "ease-in-shine",
+    });
+    Aos.refresh();
+  }, []);
+
   return (
-    <ListedCardStyled>
+    <ListedCardStyled data-aos="fade-left">
       <p className="num">{position}</p>
       <h3>{heading}</h3>
       <p>{parag}</p>
@@ -39,7 +50,7 @@ const ListedCardStyled = styled.div`
     margin-bottom: 0;
   }
   p {
-    font-size: 0.75em !important;
+    font-size: 0.75rem !important;
   }
   @media only screen and (orientation: portrait) {
     width: 90%;

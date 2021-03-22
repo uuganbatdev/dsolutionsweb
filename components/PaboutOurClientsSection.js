@@ -1,3 +1,6 @@
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import styled from "@emotion/styled";
 import IconedCard from "./IconedCard.js";
 
@@ -29,12 +32,20 @@ function PaboutOurClientsSection() {
     },
   ];
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-shine",
+    });
+    Aos.refresh();
+  }, []);
+
   return (
-    <PaboutOurClientsSectionStyled>
+    <PaboutOurClientsSectionStyled id="харилцагчид">
       <div className="our-clients">
         <div className="our-clients-left">
-          <p>CLIENTS</p>
-          <h2>OUR CLIENTS.</h2>
+          <p data-aos="fade-up">CLIENTS</p>
+          <h2 data-aos="fade-down">БИДНИЙ ХАРИЛЦАГЧИД.</h2>
         </div>
         <div className="our-clients-right">
           {iconedLists.map(({ img }) => (
@@ -68,15 +79,16 @@ const PaboutOurClientsSectionStyled = styled.div`
       font-family: "Barlow Condensed", sans-serif;
       p {
         color: #75dab4;
+        margin-bottom: 100px !important;
         font-weight: 300;
         font-size: 17px;
         text-transform: uppercase;
         letter-spacing: 14px;
       }
       h2 {
-        text-shadow: 0 8px rgba(255, 255, 255, 0.05);
+        text-shadow: 0 5px rgba(255, 255, 255, 0.05);
         margin-top: 0;
-        font-size: 5rem;
+        font-size: 25px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 4px;
@@ -89,16 +101,35 @@ const PaboutOurClientsSectionStyled = styled.div`
       justify-content: center;
     }
   }
-  @media only screen and (orientation: portrait) {
+
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .our-clients-left {
+      width: 28%;
+      padding-left: 20px;
+      h2 {
+        font-size: 2.8vh !important;
+      }
+      p {
+        font-size: 2vh !important;
+      }
+    }
+
+    .our-clients-right {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 768px) {
     height: auto;
     .bg {
       width: 110vw;
       height: 100%;
     }
     h2 {
-      margin-bottom: 1vh;
+      margin-top: 3vh !important;
+      margin-bottom: 2vh;
       word-spacing: 100vw;
-      font-size: 3rem !important;
+      font-size: 2rem !important;
     }
     .our-clients {
       flex-direction: column;

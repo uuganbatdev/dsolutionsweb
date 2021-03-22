@@ -1,38 +1,54 @@
 import styled from "@emotion/styled";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+// import { TweetMax, Power3 } from "gsap";
 import ListedCard from "./ListedCard.js";
+
+import { useTranslation } from "react-i18next";
+
 function PaboutOurPurposeSection() {
+  const { t } = useTranslation();
+
   const listData = [
     {
-      heading: "Our Mission",
-      parag: "luctus massa ipsum at tempus eleifend congue lectus bibendum",
+      heading: t(`aboutOfficeNum1Title`),
+      parag: t(`aboutOfficeNum1Desc`),
       position: 1,
     },
     {
-      heading: "Our Goals",
-      parag: "luctus massa ipsum at tempus eleifend congue lectus bibendum",
+      heading: t(`aboutOfficeNum2Title`),
+      parag: t(`aboutOfficeNum2Desc`),
       position: 2,
     },
     {
-      heading: "Why Us?",
-      parag: "luctus massa ipsum at tempus eleifend congue lectus bibendum",
+      heading: t(`aboutOfficeNum3Title`),
+      parag: t(`aboutOfficeNum3Desc`),
       position: 3,
     },
   ];
+
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+      easing: "ease-in-shine",
+    });
+    Aos.refresh();
+  }, []);
+
   return (
-    <PaboutOurPurposeSectionStyled>
+    <PaboutOurPurposeSectionStyled id="оффис">
       <div className="bg"></div>
       <div className="our-purpose">
         <div className="our-purpose-left">
-          <img
-            src="https://skepp.com/assets/Uploads/_resampled/ScaleWidthWyIxODAwIl0/IMG-2227.jpg"
-            alt="office"
-          />
+          <img src="/Office.jpeg" alt="office" data-aos="fade-right" />
         </div>
         <div className="our-purpose-right">
-          <h2>About us.</h2>
-          <p>
-            Our creative Ad agency is ranked among the finest in the US. We
-            cultivate smart ideas for start-ups and seasoned players.{" "}
+          <h2 data-aos="fade-up" className="titleBurrowing1">
+            {t(`aboutOfficeTitle`)}
+          </h2>
+          <p data-aos="fade-left" className="titleBurrowing2">
+            {t(`aboutOfficeDesc`)}
           </p>
           <ul className="list-container">
             {listData.map(({ heading, parag, position }) => (
@@ -46,6 +62,14 @@ function PaboutOurPurposeSection() {
 }
 
 const PaboutOurPurposeSectionStyled = styled.div`
+  [data-aos="rotate-c"] {
+    transform: rotate(-90deg);
+    transition-property: transform;
+  }
+
+  [data-aos="rotate-c"].aos-animate {
+    transform: rotate(0deg);
+  }
   height: 100vh;
   margin: auto;
   width: 100%;
@@ -76,10 +100,12 @@ const PaboutOurPurposeSectionStyled = styled.div`
       width: 30rem;
       height: 35rem;
       object-fit: contain;
+      opacity: 0.5;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 20px;
       }
     }
     .our-purpose-right {
@@ -94,6 +120,7 @@ const PaboutOurPurposeSectionStyled = styled.div`
         }
       }
       h2 {
+        text-shadow: 0 4px rgba(255, 255, 255, 0.05);
         font-family: "Barlow Condensed", sans-serif;
         font-weight: bold;
         font-size: 40px !important;
@@ -116,7 +143,7 @@ const PaboutOurPurposeSectionStyled = styled.div`
       margin: auto;
     }
     .our-purpose-left {
-      width: 36% !important;
+      width: 50% !important;
       height: 65% !important;
       object-fit: contain;
       margin-top: 5%;
@@ -127,18 +154,47 @@ const PaboutOurPurposeSectionStyled = styled.div`
     .our-purpose-right {
     }
   }
-  @media only screen and (max-width: 768px) {
+  @media (max-width: 768px) {
+    height: 100vh !important;
+    padding-top: 0 !important;
     .our-purpose-left {
-      width: 75% !important;
+      width: 45% !important;
+      height: 100% !important;
       position: absolute;
-      margin-right: 30vw;
+      top: 0px !important;
+      left: 0px !important;
       background: #11141b;
       img {
-        opacity: 0.2;
+        height: 100vh;
+        width: 100vw !important;
+        margin: auto !important;
+        opacity: 0.3;
       }
     }
+    /* .titleBurrowing1 {
+      color: #000 !important;
+    }
+    .titleBurrowing2 {
+      color: #000 !important;
+    } */
     .our-purpose-right {
-      width: 100% !important;
+      position: relative;
+      margin: 50px auto !important;
+      padding: 80px 0 0 30px;
+      width: 100vw !important;
+      height: 100vh !important;
+      top: -80px;
+      left: -10px;
+      h2 {
+        font-size: 10px !important;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+    .list-container {
+      width: 100vw;
+      padding-left: 5%;
     }
   }
 `;

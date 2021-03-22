@@ -1,14 +1,12 @@
 import GlobalStyles from "../components/GlobalStyles/GlobalStyles";
-//import Header from "../components/Header.js";
-// import Navbar from "../components/Nav/Navbar.js";
-import App from "../components/Hamburger/App";
+// import { CustomCursor } from "../components/CustomCursor/index";
 import Footer from "../components/Footer.js";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* <CustomCursor /> */}
       <GlobalStyles />
-      <App />
       <Component {...pageProps} />
       <Footer />
     </>
